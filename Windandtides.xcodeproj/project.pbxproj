@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B88C16E138075E2007D1C2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C16D138075E2007D1C2C /* UIKit.framework */; };
+		8B88C170138075E2007D1C2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C16F138075E2007D1C2C /* Foundation.framework */; };
+		8B88C172138075E2007D1C2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C171138075E2007D1C2C /* CoreGraphics.framework */; };
+		8B88C178138075E2007D1C2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B88C176138075E2007D1C2C /* InfoPlist.strings */; };
+		8B88C17B138075E2007D1C2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B88C17A138075E2007D1C2C /* main.m */; };
+		8B88C17E138075E2007D1C2C /* WindandtidesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B88C17D138075E2007D1C2C /* WindandtidesAppDelegate.m */; };
+		8B88C181138075E2007D1C2C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B88C17F138075E2007D1C2C /* MainWindow.xib */; };
+		8B88C184138075E2007D1C2C /* WindandtidesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B88C183138075E2007D1C2C /* WindandtidesViewController.m */; };
+		8B88C187138075E2007D1C2C /* WindandtidesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B88C185138075E2007D1C2C /* WindandtidesViewController.xib */; };
+		8B88C18E138075E2007D1C2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C16D138075E2007D1C2C /* UIKit.framework */; };
+		8B88C18F138075E2007D1C2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C16F138075E2007D1C2C /* Foundation.framework */; };
+		8B88C190138075E2007D1C2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C171138075E2007D1C2C /* CoreGraphics.framework */; };
+		8B88C198138075E2007D1C2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B88C196138075E2007D1C2C /* InfoPlist.strings */; };
+		8B88C19B138075E2007D1C2C /* WindandtidesTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 8B88C19A138075E2007D1C2C /* WindandtidesTests.h */; };
+		8B88C19D138075E2007D1C2C /* WindandtidesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B88C19C138075E2007D1C2C /* WindandtidesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B88C191138075E2007D1C2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B88C160138075E1007D1C2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B88C168138075E2007D1C2C;
+			remoteInfo = Windandtides;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8B88C169138075E2007D1C2C /* Windandtides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Windandtides.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B88C16D138075E2007D1C2C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8B88C16F138075E2007D1C2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8B88C171138075E2007D1C2C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8B88C175138075E2007D1C2C /* Windandtides-Info.plist */ = {isa = PBXFileReference; path = "Windandtides-Info.plist"; sourceTree = "<group>"; };
+		8B88C177138075E2007D1C2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8B88C179138075E2007D1C2C /* Windandtides-Prefix.pch */ = {isa = PBXFileReference; path = "Windandtides-Prefix.pch"; sourceTree = "<group>"; };
+		8B88C17A138075E2007D1C2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B88C17C138075E2007D1C2C /* WindandtidesAppDelegate.h */ = {isa = PBXFileReference; path = WindandtidesAppDelegate.h; sourceTree = "<group>"; };
+		8B88C17D138075E2007D1C2C /* WindandtidesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindandtidesAppDelegate.m; sourceTree = "<group>"; };
+		8B88C180138075E2007D1C2C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		8B88C182138075E2007D1C2C /* WindandtidesViewController.h */ = {isa = PBXFileReference; path = WindandtidesViewController.h; sourceTree = "<group>"; };
+		8B88C183138075E2007D1C2C /* WindandtidesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindandtidesViewController.m; sourceTree = "<group>"; };
+		8B88C186138075E2007D1C2C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WindandtidesViewController.xib; sourceTree = "<group>"; };
+		8B88C18D138075E2007D1C2C /* WindandtidesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WindandtidesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B88C195138075E2007D1C2C /* WindandtidesTests-Info.plist */ = {isa = PBXFileReference; path = "WindandtidesTests-Info.plist"; sourceTree = "<group>"; };
+		8B88C197138075E2007D1C2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8B88C199138075E2007D1C2C /* WindandtidesTests-Prefix.pch */ = {isa = PBXFileReference; path = "WindandtidesTests-Prefix.pch"; sourceTree = "<group>"; };
+		8B88C19A138075E2007D1C2C /* WindandtidesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WindandtidesTests.h; sourceTree = "<group>"; };
+		8B88C19C138075E2007D1C2C /* WindandtidesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindandtidesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B88C166138075E2007D1C2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B88C16E138075E2007D1C2C /* UIKit.framework in Frameworks */,
+				8B88C170138075E2007D1C2C /* Foundation.framework in Frameworks */,
+				8B88C172138075E2007D1C2C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B88C189138075E2007D1C2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B88C18E138075E2007D1C2C /* UIKit.framework in Frameworks */,
+				8B88C18F138075E2007D1C2C /* Foundation.framework in Frameworks */,
+				8B88C190138075E2007D1C2C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B88C15E138075E1007D1C2C = {
+			isa = PBXGroup;
+			children = (
+				8B88C173138075E2007D1C2C /* Windandtides */,
+				8B88C193138075E2007D1C2C /* WindandtidesTests */,
+				8B88C16C138075E2007D1C2C /* Frameworks */,
+				8B88C16A138075E2007D1C2C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B88C16A138075E2007D1C2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B88C169138075E2007D1C2C /* Windandtides.app */,
+				8B88C18D138075E2007D1C2C /* WindandtidesTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B88C16C138075E2007D1C2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B88C16D138075E2007D1C2C /* UIKit.framework */,
+				8B88C16F138075E2007D1C2C /* Foundation.framework */,
+				8B88C171138075E2007D1C2C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B88C173138075E2007D1C2C /* Windandtides */ = {
+			isa = PBXGroup;
+			children = (
+				8B88C17C138075E2007D1C2C /* WindandtidesAppDelegate.h */,
+				8B88C17D138075E2007D1C2C /* WindandtidesAppDelegate.m */,
+				8B88C17F138075E2007D1C2C /* MainWindow.xib */,
+				8B88C182138075E2007D1C2C /* WindandtidesViewController.h */,
+				8B88C183138075E2007D1C2C /* WindandtidesViewController.m */,
+				8B88C185138075E2007D1C2C /* WindandtidesViewController.xib */,
+				8B88C174138075E2007D1C2C /* Supporting Files */,
+			);
+			path = Windandtides;
+			sourceTree = "<group>";
+		};
+		8B88C174138075E2007D1C2C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B88C175138075E2007D1C2C /* Windandtides-Info.plist */,
+				8B88C176138075E2007D1C2C /* InfoPlist.strings */,
+				8B88C179138075E2007D1C2C /* Windandtides-Prefix.pch */,
+				8B88C17A138075E2007D1C2C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B88C193138075E2007D1C2C /* WindandtidesTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B88C19A138075E2007D1C2C /* WindandtidesTests.h */,
+				8B88C19C138075E2007D1C2C /* WindandtidesTests.m */,
+				8B88C194138075E2007D1C2C /* Supporting Files */,
+			);
+			path = WindandtidesTests;
+			sourceTree = "<group>";
+		};
+		8B88C194138075E2007D1C2C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B88C195138075E2007D1C2C /* WindandtidesTests-Info.plist */,
+				8B88C196138075E2007D1C2C /* InfoPlist.strings */,
+				8B88C199138075E2007D1C2C /* WindandtidesTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B88C168138075E2007D1C2C /* Windandtides */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B88C1A0138075E2007D1C2C /* Build configuration list for PBXNativeTarget "Windandtides" */;
+			buildPhases = (
+				8B88C165138075E2007D1C2C /* Sources */,
+				8B88C166138075E2007D1C2C /* Frameworks */,
+				8B88C167138075E2007D1C2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Windandtides;
+			productName = Windandtides;
+			productReference = 8B88C169138075E2007D1C2C /* Windandtides.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B88C18C138075E2007D1C2C /* WindandtidesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B88C1A3138075E2007D1C2C /* Build configuration list for PBXNativeTarget "WindandtidesTests" */;
+			buildPhases = (
+				8B88C188138075E2007D1C2C /* Sources */,
+				8B88C189138075E2007D1C2C /* Frameworks */,
+				8B88C18A138075E2007D1C2C /* Resources */,
+				8B88C18B138075E2007D1C2C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B88C192138075E2007D1C2C /* PBXTargetDependency */,
+			);
+			name = WindandtidesTests;
+			productName = WindandtidesTests;
+			productReference = 8B88C18D138075E2007D1C2C /* WindandtidesTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B88C160138075E1007D1C2C /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 8B88C163138075E1007D1C2C /* Build configuration list for PBXProject "Windandtides" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8B88C15E138075E1007D1C2C;
+			productRefGroup = 8B88C16A138075E2007D1C2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B88C168138075E2007D1C2C /* Windandtides */,
+				8B88C18C138075E2007D1C2C /* WindandtidesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B88C167138075E2007D1C2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B88C178138075E2007D1C2C /* InfoPlist.strings in Resources */,
+				8B88C181138075E2007D1C2C /* MainWindow.xib in Resources */,
+				8B88C187138075E2007D1C2C /* WindandtidesViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B88C18A138075E2007D1C2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B88C198138075E2007D1C2C /* InfoPlist.strings in Resources */,
+				8B88C19B138075E2007D1C2C /* WindandtidesTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B88C18B138075E2007D1C2C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B88C165138075E2007D1C2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B88C17B138075E2007D1C2C /* main.m in Sources */,
+				8B88C17E138075E2007D1C2C /* WindandtidesAppDelegate.m in Sources */,
+				8B88C184138075E2007D1C2C /* WindandtidesViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B88C188138075E2007D1C2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B88C19D138075E2007D1C2C /* WindandtidesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B88C192138075E2007D1C2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B88C168138075E2007D1C2C /* Windandtides */;
+			targetProxy = 8B88C191138075E2007D1C2C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8B88C176138075E2007D1C2C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B88C177138075E2007D1C2C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8B88C17F138075E2007D1C2C /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B88C180138075E2007D1C2C /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		8B88C185138075E2007D1C2C /* WindandtidesViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B88C186138075E2007D1C2C /* en */,
+			);
+			name = WindandtidesViewController.xib;
+			sourceTree = "<group>";
+		};
+		8B88C196138075E2007D1C2C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B88C197138075E2007D1C2C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B88C19E138075E2007D1C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8B88C19F138075E2007D1C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		8B88C1A1138075E2007D1C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Windandtides/Windandtides-Prefix.pch";
+				INFOPLIST_FILE = "Windandtides/Windandtides-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8B88C1A2138075E2007D1C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Windandtides/Windandtides-Prefix.pch";
+				INFOPLIST_FILE = "Windandtides/Windandtides-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8B88C1A4138075E2007D1C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Windandtides.app/Windandtides";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WindandtidesTests/WindandtidesTests-Prefix.pch";
+				INFOPLIST_FILE = "WindandtidesTests/WindandtidesTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		8B88C1A5138075E2007D1C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Windandtides.app/Windandtides";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WindandtidesTests/WindandtidesTests-Prefix.pch";
+				INFOPLIST_FILE = "WindandtidesTests/WindandtidesTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B88C163138075E1007D1C2C /* Build configuration list for PBXProject "Windandtides" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B88C19E138075E2007D1C2C /* Debug */,
+				8B88C19F138075E2007D1C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B88C1A0138075E2007D1C2C /* Build configuration list for PBXNativeTarget "Windandtides" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B88C1A1138075E2007D1C2C /* Debug */,
+				8B88C1A2138075E2007D1C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8B88C1A3138075E2007D1C2C /* Build configuration list for PBXNativeTarget "WindandtidesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B88C1A4138075E2007D1C2C /* Debug */,
+				8B88C1A5138075E2007D1C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B88C160138075E1007D1C2C /* Project object */;
+}
