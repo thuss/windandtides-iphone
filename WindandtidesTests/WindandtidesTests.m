@@ -6,8 +6,12 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "WindandtidesTests.h"
+#import <SenTestingKit/SenTestingKit.h>
+#define HC_SHORTHAND
+#import <OCHamcrestIOS/OCHamcrestIOS.h>
 
+@interface WindandtidesTests : SenTestCase {}
+@end
 
 @implementation WindandtidesTests
 
@@ -27,7 +31,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in WindandtidesTests");
+    assertThat(@"foo", equalTo(@"foo"));
 }
 
 @end

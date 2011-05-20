@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WindandtidesViewController : UIViewController {
-    
-}
+@interface WindandtidesViewController : UIViewController { }
+
+@property (nonatomic, retain) IBOutlet UIWebView *forecastWebView;
+@property (nonatomic, retain) IBOutlet UIWebView *tidesAndCurrentsWebView;
+@property (nonatomic, retain) IBOutlet UIWebView *angelIslandWebView;
+@property (nonatomic, retain) IBOutlet UIWebView *goldenGateWebView;
 
 @end

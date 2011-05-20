@@ -15,13 +15,16 @@
 
 @synthesize window=_window;
 
-@synthesize viewController=_viewController;
+@synthesize tabBarController=_tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Set the UIWebView User Agent to a custom value
+    NSDictionary *dictionnary = [[NSDictionary alloc] initWithObjectsAndKeys:@"Windandtides Mobile App iPhone Mobile//Safari", @"UserAgent", nil];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionnary];
+    [dictionnary release];
      
-    self.window.rootViewController = self.viewController;
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -68,7 +71,7 @@
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
+    [_tabBarController release];
     [super dealloc];
 }
 

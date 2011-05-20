@@ -8,11 +8,24 @@
 
 #import "WindandtidesViewController.h"
 
+@interface WindandtidesViewController()
+- (void)loadWebView:(UIWebView *)webView url:(NSString *)url;
+@end
+
 @implementation WindandtidesViewController
+
+@synthesize forecastWebView=_forecastWebView;
+@synthesize tidesAndCurrentsWebView=_tidesAndCurrentsWebView;
+@synthesize angelIslandWebView=_angelIslandWebView;
+@synthesize goldenGateWebView=_goldenGateWebView;
 
 - (void)dealloc
 {
     [super dealloc];
+    [_forecastWebView release];
+    [_tidesAndCurrentsWebView release];
+    [_angelIslandWebView release];
+    [_goldenGateWebView release];
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,13 +38,19 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    [super viewDidLoad];    
+    [self loadWebView:[self forecastWebView] url:@"http://localhost:3000/marine/forecast"];
+    [self loadWebView:[self tidesAndCurrentsWebView] url:@"http://localhost:3000/marine/tide"];
+    [self loadWebView:[self angelIslandWebView] url:@"http://localhost:3000/marine/wind/Angel+Island"];
+    [self loadWebView:[self goldenGateWebView] url:@"http://localhost:3000/marine/wind/Golden+Gate"];
 }
-*/
+
+- (void)loadWebView:(UIWebView *)webView url:(NSString *)url {
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];    
+}
 
 - (void)viewDidUnload
 {
