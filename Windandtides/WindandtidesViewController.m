@@ -51,11 +51,6 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
 #pragma mark - UIWebViewDelegate methods
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
@@ -71,7 +66,7 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [self.activityIndicator stopAnimating];
-    NSString* errorString = @"<html><center><br/><br/><br/><br/><h1>Error loading Windandtides data<br/><br/>Try reloading again in a minute or so</h1></center></html>";
+    NSString* errorString = @"<html><center><br/><h1>Error retrieving Windandtides data<br/><br/>Check your network connection and press the reload button or try back later</h1></center></html>";
     [self.mainWebView loadHTMLString:errorString baseURL:nil];
 }
 
