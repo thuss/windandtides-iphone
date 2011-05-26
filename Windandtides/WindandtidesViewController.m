@@ -17,15 +17,13 @@
 @synthesize activityIndicator=_activityIndicator;
 @synthesize mainWebView=_mainWebView;
 
-- (void)dealloc
-{
+- (void)dealloc {
     [super dealloc];
     [_activityIndicator release];
     [_mainWebView release];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];    
     // Release any cached data, images, etc that aren't in use.
@@ -57,6 +55,8 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+#pragma mark - UIWebViewDelegate methods
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;

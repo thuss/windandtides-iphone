@@ -27,6 +27,7 @@
 		8BC54B17138DCAD3005E74F4 /* trend.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B16138DCAD3005E74F4 /* trend.png */; };
 		8BC54B24138DCCEC005E74F4 /* windvane.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B23138DCCEC005E74F4 /* windvane.png */; };
 		8BC54B26138DCDB8005E74F4 /* monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B25138DCDB8005E74F4 /* monitor.png */; };
+		8BC54B28138DE079005E74F4 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B27138DE079005E74F4 /* reload.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		8BC54B16138DCAD3005E74F4 /* trend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trend.png; sourceTree = "<group>"; };
 		8BC54B23138DCCEC005E74F4 /* windvane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windvane.png; sourceTree = "<group>"; };
 		8BC54B25138DCDB8005E74F4 /* monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor.png; sourceTree = "<group>"; };
+		8BC54B27138DE079005E74F4 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,6 @@
 		8B88C15E138075E1007D1C2C = {
 			isa = PBXGroup;
 			children = (
-				8BC54B11138DBD1D005E74F4 /* Models */,
 				8B88C174138075E2007D1C2C /* Resources */,
 				8B88C1AB13807D1C007D1C2C /* Views */,
 				8B88C173138075E2007D1C2C /* Controllers */,
@@ -140,6 +141,7 @@
 		8B88C174138075E2007D1C2C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8BC54B27138DE079005E74F4 /* reload.png */,
 				8BC54B25138DCDB8005E74F4 /* monitor.png */,
 				8BC54B23138DCCEC005E74F4 /* windvane.png */,
 				8BC54B16138DCAD3005E74F4 /* trend.png */,
@@ -181,13 +183,6 @@
 				8B8C85301386FB6000697EBE /* MainWebView.xib */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		8BC54B11138DBD1D005E74F4 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +230,7 @@
 		8B88C160138075E1007D1C2C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				ORGANIZATIONNAME = Windandtides;
+				ORGANIZATIONNAME = Windandtides.com;
 			};
 			buildConfigurationList = 8B88C163138075E1007D1C2C /* Build configuration list for PBXProject "Windandtides" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -268,6 +263,7 @@
 				8BC54B17138DCAD3005E74F4 /* trend.png in Resources */,
 				8BC54B24138DCCEC005E74F4 /* windvane.png in Resources */,
 				8BC54B26138DCDB8005E74F4 /* monitor.png in Resources */,
+				8BC54B28138DE079005E74F4 /* reload.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
