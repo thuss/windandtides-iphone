@@ -3,13 +3,13 @@
 //  Windandtides
 //
 //  Created by Todd Huss on 5/15/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Windandtides.com. All rights reserved.
 //
 
 #import "WindandtidesViewController.h"
 
 @interface WindandtidesViewController()
-- (void)loadWebView:(UIWebView *)webView url:(NSString *)url;
+
 @end
 
 @implementation WindandtidesViewController
@@ -35,17 +35,16 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib
 - (void)viewDidLoad {
-    [super viewDidLoad];              
-    
-    [self loadWebView:[self mainWebView] url:@"http://localhost:3000/marine/forecast"];
-//    [self.forecastActivityIndicator stopAnimating];
-//    [self loadWebView:[self tidesAndCurrentsWebView] url:@"http://localhost:3000/marine/tide"];
-//    [self loadWebView:[self angelIslandWebView] url:@"http://localhost:3000/marine/wind/Angel+Island"];
-//    [self loadWebView:[self goldenGateWebView] url:@"http://localhost:3000/marine/wind/Golden+Gate"];
-}
-
-- (void)loadWebView:(UIWebView *)webView url:(NSString *)url {
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];    
+    [super viewDidLoad];      
+    NSArray *urls = [NSArray arrayWithObjects: 
+                     @"http://localhost:3000/marine/forecast", 
+                     @"http://localhost:3000/marine/tide", 
+                     @"http://localhost:3000/marine/wind/Angel+Island", 
+                     @"http://localhost:3000/marine/wind/Golden+Gate", 
+                     nil];
+    NSString *url = [urls objectAtIndex:self.tabBarItem.tag];
+    NSLog(@"Current url is %@", url);
+    [self.mainWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
 
 - (void)viewDidUnload {
