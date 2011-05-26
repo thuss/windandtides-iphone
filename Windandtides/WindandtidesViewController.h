@@ -10,10 +10,7 @@
 
 @interface WindandtidesViewController : UIViewController <UIWebViewDelegate> { }
 
-@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *forecastActivityIndicator;
-@property (nonatomic, retain) IBOutlet UIWebView *forecastWebView;
-@property (nonatomic, retain) IBOutlet UIWebView *tidesAndCurrentsWebView;
-@property (nonatomic, retain) IBOutlet UIWebView *angelIslandWebView;
-@property (nonatomic, retain) IBOutlet UIWebView *goldenGateWebView;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, retain) IBOutlet UIWebView *mainWebView;
 
 @end
