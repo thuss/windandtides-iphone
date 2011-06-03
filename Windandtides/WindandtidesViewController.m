@@ -9,7 +9,8 @@
 #import "WindandtidesViewController.h"
 
 @interface WindandtidesViewController()
-
+- (void) addSwipeGestureRecognizers;
+- (void) loadWebView:(int)tabIndex;
 @end
 
 @implementation WindandtidesViewController
@@ -34,24 +35,51 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib
 - (void)viewDidLoad {
     [super viewDidLoad];      
-    NSArray *urls = [NSArray arrayWithObjects: 
-                     @"http://localhost:3000/marine/forecast", 
-                     @"http://localhost:3000/marine/tide", 
-                     @"http://localhost:3000/marine/wind/Angel+Island", 
-                     @"http://localhost:3000/marine/wind/Golden+Gate", 
-                     nil];
-    NSString *url = [urls objectAtIndex:self.tabBarItem.tag];
-    NSLog(@"Current url is %@", url);
-    [self.mainWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+    [self loadWebView:self.tabBarItem.tag];    
+    [self addSwipeGestureRecognizers];    
 }
 
 - (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    [super viewDidUnload];    
+    self.activityIndicator = nil;
+    self.mainWebView = nil;
 }
 
-#pragma mark - UIWebViewDelegate methods
+# pragma mark - UISwipeGestureRecognizer methods
+
+- (void) addSwipeGestureRecognizers {
+    UISwipeGestureRecognizer *recognizerLeft;
+    recognizerLeft = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)] autorelease];
+    recognizerLeft.direction = UISwipeGestureRecognizerDirectionLeft;    
+    [self.view addGestureRecognizer:recognizerLeft];
+    
+    UISwipeGestureRecognizer *recognizerRight;
+    recognizerRight = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight:)] autorelease];
+    recognizerRight.direction = UISwipeGestureRecognizerDirectionRight;    
+    [self.view addGestureRecognizer:recognizerRight];
+    
+}
+
+- (void)didSwipeRight:(UISwipeGestureRecognizer *)recognizer {    
+    [self.tabBarController setSelectedIndex:((self.tabBarItem.tag + 3) % 4)];    
+}
+
+- (void)didSwipeLeft:(UISwipeGestureRecognizer *)recognizer {    
+    [self.tabBarController setSelectedIndex:((self.tabBarItem.tag + 1) % 4)];    
+}
+
+#pragma mark - UIWebView and UIWebViewDelegate methods
+
+- (void) loadWebView:(int)tabIndex {
+    NSArray *urls = [NSArray arrayWithObjects: 
+                     @"http://windandtides.com/marine/forecast", 
+                     @"http://windandtides.com/marine/tide", 
+                     @"http://windandtides.com/marine/wind/Angel+Island", 
+                     @"http://windandtides.com/marine/wind/Golden+Gate", 
+                     nil];
+    NSString *url = [urls objectAtIndex:tabIndex];
+    [self.mainWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];    
+}
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -66,8 +94,9 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [self.activityIndicator stopAnimating];
-    NSString* errorString = @"<html><center><br/><h1>Error retrieving Windandtides data<br/><br/>Check your network connection and press the reload button or try back later</h1></center></html>";
-    [self.mainWebView loadHTMLString:errorString baseURL:nil];
+    NSString* errorString = @"<html><center><br/><h1>Error retrieving Windandtides data<br/><br/>Check your network connection and press the reload button or try back later</h1></center></html>";    
+    NSURL *url = [NSURL URLWithString:[error.userInfo objectForKey:@"NSErrorFailingURLStringKey"]];
+    [self.mainWebView loadHTMLString:errorString baseURL:url];
 }
 
 @end
