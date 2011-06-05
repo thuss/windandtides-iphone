@@ -9,8 +9,16 @@
 #import "WindandtidesViewController.h"
 
 @interface WindandtidesViewController()
-- (void) addSwipeGestureRecognizers;
-- (void) loadWebView:(int)tabIndex;
+
+typedef enum { 
+    kAnimateLeft, 
+    kAnimateRight 
+} AnimationDirection;
+
+- (void)addSwipeGestureRecognizers;
+- (void)loadWebView:(int)tabIndex;
+- (void)animateSwipe:(int)tabIndex withDirection:(AnimationDirection)direction;
+
 @end
 
 @implementation WindandtidesViewController
@@ -47,7 +55,7 @@
 
 # pragma mark - UISwipeGestureRecognizer methods
 
-- (void) addSwipeGestureRecognizers {
+- (void)addSwipeGestureRecognizers {
     UISwipeGestureRecognizer *recognizerLeft;
     recognizerLeft = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)] autorelease];
     recognizerLeft.direction = UISwipeGestureRecognizerDirectionLeft;    
@@ -61,11 +69,39 @@
 }
 
 - (void)didSwipeRight:(UISwipeGestureRecognizer *)recognizer {    
-    [self.tabBarController setSelectedIndex:((self.tabBarItem.tag + 3) % 4)];    
+    int tabIndex = ((self.tabBarItem.tag + 3) % 4);
+    [self animateSwipe:tabIndex withDirection:kAnimateLeft];
 }
 
 - (void)didSwipeLeft:(UISwipeGestureRecognizer *)recognizer {    
-    [self.tabBarController setSelectedIndex:((self.tabBarItem.tag + 1) % 4)];    
+    int tabIndex = ((self.tabBarItem.tag + 1) % 4);
+    [self animateSwipe:tabIndex withDirection:kAnimateRight];
+}
+
+- (void)animateSwipe:(int)newTabIndex withDirection:(AnimationDirection)direction {
+    // Get the views.
+    UIView * fromView = self.tabBarController.selectedViewController.view;
+    UIView * toView = [[self.tabBarController.viewControllers objectAtIndex:newTabIndex] view];    
+    // Get the size of the view area.
+    CGRect viewSize = fromView.frame;    
+    // Add the to view to the tab bar view.
+    [fromView.superview addSubview:toView];    
+    // Position it off screen.
+    toView.frame = CGRectMake((direction == kAnimateRight ? 320 : -320), viewSize.origin.y, 320, viewSize.size.height);
+    // Run the animation
+    [UIView animateWithDuration:0.3 
+                     animations: ^{                         
+                         // Animate the views on and off the screen. This will appear to slide.
+                         fromView.frame =CGRectMake((direction == kAnimateRight ? -320 : 320), viewSize.origin.y, 320, viewSize.size.height);
+                         toView.frame =CGRectMake(0, viewSize.origin.y, 320, viewSize.size.height);
+                     }     
+                     completion:^(BOOL finished) {
+                         if (finished) {                             
+                             // Remove the old view from the tabbar view.
+                             [fromView removeFromSuperview];
+                             self.tabBarController.selectedIndex = newTabIndex;                
+                         }
+                     }];
 }
 
 #pragma mark - UIWebView and UIWebViewDelegate methods
