@@ -45,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		8B01EAAF139C240E00A64429 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		8B72BAF0139D879F00913374 /* WindandtidesUrlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindandtidesUrlManager.h; sourceTree = "<group>"; };
 		8B88C169138075E2007D1C2C /* Windandtides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Windandtides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B88C16D138075E2007D1C2C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B88C16F138075E2007D1C2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -73,7 +74,6 @@
 		8BC54B27138DE079005E74F4 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
 		8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManagerTests.m; sourceTree = "<group>"; };
 		8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManager.m; sourceTree = "<group>"; };
-		8BE85397139D6F4100041B34 /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = en; path = en.lproj/WindandtidesUrlManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,10 +198,11 @@
 		8BE8538B139D55B600041B34 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8BE85398139D6F4100041B34 /* WindandtidesUrlManager.h */,
+				8B72BAF0139D879F00913374 /* WindandtidesUrlManager.h */,
 				8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */,
 			);
 			name = Models;
+			path = Windandtides;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,14 +369,6 @@
 				8B88C197138075E2007D1C2C /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8BE85398139D6F4100041B34 /* WindandtidesUrlManager.h */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8BE85397139D6F4100041B34 /* en */,
-			);
-			name = WindandtidesUrlManager.h;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
