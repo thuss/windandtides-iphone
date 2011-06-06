@@ -29,6 +29,8 @@
 		8BC54B24138DCCEC005E74F4 /* windvane.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B23138DCCEC005E74F4 /* windvane.png */; };
 		8BC54B26138DCDB8005E74F4 /* monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B25138DCDB8005E74F4 /* monitor.png */; };
 		8BC54B28138DE079005E74F4 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B27138DE079005E74F4 /* reload.png */; };
+		8BE85392139D57EB00041B34 /* WindandtidesUrlManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTests.m */; };
+		8BE85395139D59B700041B34 /* WindandtidesUrlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,9 @@
 		8BC54B23138DCCEC005E74F4 /* windvane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windvane.png; sourceTree = "<group>"; };
 		8BC54B25138DCDB8005E74F4 /* monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor.png; sourceTree = "<group>"; };
 		8BC54B27138DE079005E74F4 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
+		8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManagerTests.m; sourceTree = "<group>"; };
+		8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManager.m; sourceTree = "<group>"; };
+		8BE85397139D6F4100041B34 /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = en; path = en.lproj/WindandtidesUrlManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +107,7 @@
 				8B88C174138075E2007D1C2C /* Resources */,
 				8B88C1AB13807D1C007D1C2C /* Views */,
 				8B88C173138075E2007D1C2C /* Controllers */,
+				8BE8538B139D55B600041B34 /* Models */,
 				8B88C193138075E2007D1C2C /* Tests */,
 				8B88C16C138075E2007D1C2C /* Frameworks */,
 				8B88C16A138075E2007D1C2C /* Products */,
@@ -164,6 +170,7 @@
 			children = (
 				8B88C19C138075E2007D1C2C /* WindandtidesTests.m */,
 				8B88C194138075E2007D1C2C /* Supporting Files */,
+				8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTests.m */,
 			);
 			name = Tests;
 			path = WindandtidesTests;
@@ -186,6 +193,15 @@
 				8B8C85301386FB6000697EBE /* MainWebView.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		8BE8538B139D55B600041B34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8BE85398139D6F4100041B34 /* WindandtidesUrlManager.h */,
+				8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +321,7 @@
 				8B88C17B138075E2007D1C2C /* main.m in Sources */,
 				8B88C17E138075E2007D1C2C /* WindandtidesAppDelegate.m in Sources */,
 				8B88C184138075E2007D1C2C /* WindandtidesViewController.m in Sources */,
+				8BE85395139D59B700041B34 /* WindandtidesUrlManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B88C19D138075E2007D1C2C /* WindandtidesTests.m in Sources */,
+				8BE85392139D57EB00041B34 /* WindandtidesUrlManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +368,14 @@
 				8B88C197138075E2007D1C2C /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8BE85398139D6F4100041B34 /* WindandtidesUrlManager.h */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BE85397139D6F4100041B34 /* en */,
+			);
+			name = WindandtidesUrlManager.h;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

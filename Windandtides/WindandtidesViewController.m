@@ -7,8 +7,11 @@
 //
 
 #import "WindandtidesViewController.h"
+#import "WindandtidesUrlManager.h"
 
 @interface WindandtidesViewController()
+
+@property (nonatomic, retain) WindandtidesUrlManager *urlManager;
 
 typedef enum { 
     kAnimateLeft, 
@@ -25,11 +28,13 @@ typedef enum {
 
 @synthesize activityIndicator=_activityIndicator;
 @synthesize mainWebView=_mainWebView;
+@synthesize urlManager=_urlManager;
 
 - (void)dealloc {
     [super dealloc];
     [_activityIndicator release];
     [_mainWebView release];
+    [_urlManager release];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,7 +47,8 @@ typedef enum {
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib
 - (void)viewDidLoad {
-    [super viewDidLoad];      
+    [super viewDidLoad];  
+    self.urlManager = [[WindandtidesUrlManager alloc] init];
     [self loadWebView:self.tabBarItem.tag];    
     [self addSwipeGestureRecognizers];    
 }
@@ -51,6 +57,7 @@ typedef enum {
     [super viewDidUnload];    
     self.activityIndicator = nil;
     self.mainWebView = nil;
+    self.urlManager = nil;
 }
 
 # pragma mark - UISwipeGestureRecognizer methods
@@ -107,14 +114,14 @@ typedef enum {
 #pragma mark - UIWebView and UIWebViewDelegate methods
 
 - (void) loadWebView:(int)tabIndex {
-    NSArray *urls = [NSArray arrayWithObjects: 
-                     @"http://windandtides.com/marine/forecast", 
-                     @"http://windandtides.com/marine/tide", 
-                     @"http://windandtides.com/marine/wind/Angel+Island", 
-                     @"http://windandtides.com/marine/wind/Golden+Gate", 
-                     nil];
-    NSString *url = [urls objectAtIndex:tabIndex];
-    [self.mainWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];    
+    WindandtidesPages page = kForecast;
+    switch (tabIndex) {
+        case 1: page = kTidesAndCurrents; break;
+        case 2: page = kAngelIslandWinds; break;
+        case 3: page = kGoldenGateWinds; break;
+    }
+    NSURL *url = [NSURL URLWithString:[self.urlManager urlFor:page]];
+    [self.mainWebView loadRequest:[NSURLRequest requestWithURL:url]];    
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
