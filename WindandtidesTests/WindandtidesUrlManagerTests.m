@@ -30,11 +30,11 @@ WindandtidesUrlManager *urlManager;
 }
 
 - (void)testConstantsExist {        
-    NSNumber* (^number)(int) = ^(int i) { return [NSNumber numberWithInt:i]; };
-    assertThat(number(kForecast), equalTo(number(0)));
-    assertThat(number(kTidesAndCurrents), equalTo(number(1)));
-    assertThat(number(kAngelIslandWinds), equalTo(number(2)));
-    assertThat(number(kGoldenGateWinds), equalTo(number(3)));    
+    NSNumber* (^constant)(int) = ^(int i) { return [NSNumber numberWithInt:i]; };
+    assertThat(constant(kForecast), equalTo(constant(0)));
+    assertThat(constant(kTidesAndCurrents), equalTo(constant(1)));
+    assertThat(constant(kAngelIslandWinds), equalTo(constant(2)));
+    assertThat(constant(kGoldenGateWinds), equalTo(constant(3)));    
 }
 
 - (void)testUrlsExistForConstants {
