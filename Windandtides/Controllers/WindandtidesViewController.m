@@ -27,11 +27,11 @@
 @synthesize swipeGestures=_swipeGestures;
 
 - (void)dealloc {
-    [super dealloc];
     [_activityIndicator release];
     [_mainWebView release];
     [_urlManager release];
     [_swipeGestures release];
+    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +41,7 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad {
+- (void)viewDidLoad {      
     [super viewDidLoad];  
     self.urlManager = [[WindandtidesUrlManager alloc] init];
     [self loadWebView:self.tabBarItem.tag];   
@@ -59,12 +59,8 @@
 #pragma mark - UIWebView and UIWebViewDelegate methods
 
 - (void) loadWebView:(int)tabIndex {
-    WindandtidesPages page = kForecast;
-    switch (tabIndex) {
-        case 1: page = kTidesAndCurrents; break;
-        case 2: page = kAngelIslandWinds; break;
-        case 3: page = kGoldenGateWinds; break;
-    }
+    WindandtidesPages pageForTab[4] = {kForecast, kTidesAndCurrents, kAngelIslandWinds, kGoldenGateWinds};
+    WindandtidesPages page = pageForTab[tabIndex];
     NSURL *url = [NSURL URLWithString:[self.urlManager urlFor:page]];
     [self.mainWebView loadRequest:[NSURLRequest requestWithURL:url]];    
 }
@@ -82,9 +78,25 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [self.activityIndicator stopAnimating];
-    NSString* errorString = @"<html><center><br/><h1>Error retrieving Windandtides data<br/><br/>Check your network connection and press the reload button or try back later</h1></center></html>";    
-    NSURL *url = [NSURL URLWithString:[error.userInfo objectForKey:@"NSErrorFailingURLStringKey"]];
-    [self.mainWebView loadHTMLString:errorString baseURL:url];
+    // If the webview doesn't contain a valid URL, we have to reset baseURL for future reloads
+    if ([self.mainWebView.request.URL.absoluteString length] == 0) {
+        NSURL *url = [NSURL URLWithString:[error.userInfo objectForKey:@"NSErrorFailingURLStringKey"]];
+        [self.mainWebView loadHTMLString:nil baseURL:url];        
+    }
+    // Show the alert
+    [[[[UIAlertView alloc] initWithTitle:@"Network Error" 
+                                 message:@"Do you you want to retry?" delegate:self 
+                       cancelButtonTitle:@"Retry" 
+                       otherButtonTitles:@"Cancel", nil] autorelease] show];
+}
+
+# pragma mark - UIAlertViewDelegate methods
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    int retryButtonIndex = 0;
+    if (buttonIndex == retryButtonIndex) {
+        [self.mainWebView reload];
+    }
 }
 
 @end

@@ -8,34 +8,38 @@
 
 #import "WindandtidesUrlManager.h"
 
-NSDictionary *pageUrlDict;
+@interface WindandtidesUrlManager()
+
+@property (nonatomic, retain) NSDictionary *pages;
+
+@end
 
 @implementation WindandtidesUrlManager
 
+@synthesize pages=_pages;
+
 -(void)dealloc {
-    [pageUrlDict release];
+    [_pages release];
     [super dealloc];
 }
 
 - (id) init {
     self = [super init];
-    if (self) {
-        pageUrlDict = [[NSDictionary dictionaryWithObjectsAndKeys:
-                        @"http://windandtides.com/marine/forecast", 
-                        [NSNumber numberWithInt:kForecast],
-                        @"http://windandtides.com/marine/tide", 
-                        [NSNumber numberWithInt:kTidesAndCurrents],
-                        @"http://windandtides.com/marine/wind/Angel+Island", 
-                        [NSNumber numberWithInt:kAngelIslandWinds],
-                        @"http://windandtides.com/marine/wind/Golden+Gate", 
-                        [NSNumber numberWithInt:kGoldenGateWinds],                        
-                        nil] retain];
+    if (self) {        
+        #define URL(uri) [NSString stringWithFormat:@"http://windandtides.com%@", uri]
+        #define NUM(x) [NSNumber numberWithInt: x]        
+        self.pages = [NSDictionary dictionaryWithObjectsAndKeys:
+                      URL(@"/marine/forecast"), NUM(kForecast),
+                      URL(@"/marine/tide"), NUM(kTidesAndCurrents),
+                      URL(@"/marine/wind/Angel+Island"), NUM(kAngelIslandWinds),
+                      URL(@"/marine/wind/Golden+Gate"), NUM(kGoldenGateWinds),                        
+                      nil];
     }
     return self;
 }
 
 -(NSString *)urlFor:(WindandtidesPages)page {
-    return [pageUrlDict objectForKey:[NSNumber numberWithInt:page]];
+    return [self.pages objectForKey:[NSNumber numberWithInt:page]];
 }
 
 @end
