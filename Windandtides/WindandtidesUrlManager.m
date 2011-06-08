@@ -19,7 +19,7 @@ NSDictionary *pageUrlDict;
 
 - (id) init {
     self = [super init];
-    if (self != nil) {
+    if (self) {
         pageUrlDict = [[NSDictionary dictionaryWithObjectsAndKeys:
                         @"http://windandtides.com/marine/forecast", 
                         [NSNumber numberWithInt:kForecast],

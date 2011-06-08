@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B01EAB0139C240E00A64429 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B01EAAF139C240E00A64429 /* Entitlements.plist */; };
+		8B4438FE139ED02C00185ECE /* AnimatedSwipeGestures.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4438FD139ED02C00185ECE /* AnimatedSwipeGestures.m */; };
 		8B88C16E138075E2007D1C2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C16D138075E2007D1C2C /* UIKit.framework */; };
 		8B88C170138075E2007D1C2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C16F138075E2007D1C2C /* Foundation.framework */; };
 		8B88C172138075E2007D1C2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C171138075E2007D1C2C /* CoreGraphics.framework */; };
@@ -45,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		8B01EAAF139C240E00A64429 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		8B4438FC139ED02C00185ECE /* AnimatedSwipeGestures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedSwipeGestures.h; sourceTree = "<group>"; };
+		8B4438FD139ED02C00185ECE /* AnimatedSwipeGestures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedSwipeGestures.m; sourceTree = "<group>"; };
 		8B72BAF0139D879F00913374 /* WindandtidesUrlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindandtidesUrlManager.h; sourceTree = "<group>"; };
 		8B88C169138075E2007D1C2C /* Windandtides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Windandtides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B88C16D138075E2007D1C2C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -101,9 +104,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B4438FA139ECFA900185ECE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8B4438FC139ED02C00185ECE /* AnimatedSwipeGestures.h */,
+				8B4438FD139ED02C00185ECE /* AnimatedSwipeGestures.m */,
+			);
+			name = Helpers;
+			path = Windandtides/Helpers;
+			sourceTree = "<group>";
+		};
 		8B88C15E138075E1007D1C2C = {
 			isa = PBXGroup;
 			children = (
+				8B4438FA139ECFA900185ECE /* Helpers */,
 				8B88C174138075E2007D1C2C /* Resources */,
 				8B88C1AB13807D1C007D1C2C /* Views */,
 				8B88C173138075E2007D1C2C /* Controllers */,
@@ -324,6 +338,7 @@
 				8B88C17E138075E2007D1C2C /* WindandtidesAppDelegate.m in Sources */,
 				8B88C184138075E2007D1C2C /* WindandtidesViewController.m in Sources */,
 				8BE85395139D59B700041B34 /* WindandtidesUrlManager.m in Sources */,
+				8B4438FE139ED02C00185ECE /* AnimatedSwipeGestures.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
