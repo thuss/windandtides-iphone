@@ -377,6 +377,7 @@
 				8B88C180138075E2007D1C2C /* en */,
 			);
 			name = MainWindow.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		8B88C196138075E2007D1C2C /* InfoPlist.strings */ = {
