@@ -8,19 +8,14 @@
 
 #import "WindandtidesViewController.h"
 #import "WindandtidesUrlManager.h"
+#import "AnimatedSwipeGestures.h"
 
 @interface WindandtidesViewController()
 
 @property (nonatomic, retain) WindandtidesUrlManager *urlManager;
+@property (nonatomic, retain) AnimatedSwipeGestures *swipeGestures;
 
-typedef enum { 
-    kAnimateLeft, 
-    kAnimateRight 
-} AnimationDirection;
-
-- (void)addSwipeGestureRecognizers;
 - (void)loadWebView:(int)tabIndex;
-- (void)animateSwipe:(int)tabIndex withDirection:(AnimationDirection)direction;
 
 @end
 
@@ -29,12 +24,14 @@ typedef enum {
 @synthesize activityIndicator=_activityIndicator;
 @synthesize mainWebView=_mainWebView;
 @synthesize urlManager=_urlManager;
+@synthesize swipeGestures=_swipeGestures;
 
 - (void)dealloc {
     [super dealloc];
     [_activityIndicator release];
     [_mainWebView release];
     [_urlManager release];
+    [_swipeGestures release];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,8 +44,8 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];  
     self.urlManager = [[WindandtidesUrlManager alloc] init];
-    [self loadWebView:self.tabBarItem.tag];    
-    [self addSwipeGestureRecognizers];    
+    [self loadWebView:self.tabBarItem.tag];   
+    self.swipeGestures = [[AnimatedSwipeGestures alloc] initWithController:self.tabBarController];  
 }
 
 - (void)viewDidUnload {
@@ -56,57 +53,7 @@ typedef enum {
     self.activityIndicator = nil;
     self.mainWebView = nil;
     self.urlManager = nil;
-}
-
-# pragma mark - UISwipeGestureRecognizer methods
-
-- (void)addSwipeGestureRecognizers {
-    UISwipeGestureRecognizer *recognizerLeft;
-    recognizerLeft = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)] autorelease];
-    recognizerLeft.direction = UISwipeGestureRecognizerDirectionLeft;    
-    [self.view addGestureRecognizer:recognizerLeft];
-    
-    UISwipeGestureRecognizer *recognizerRight;
-    recognizerRight = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight:)] autorelease];
-    recognizerRight.direction = UISwipeGestureRecognizerDirectionRight;    
-    [self.view addGestureRecognizer:recognizerRight];
-    
-}
-
-- (void)didSwipeRight:(UISwipeGestureRecognizer *)recognizer {    
-    int tabIndex = ((self.tabBarItem.tag + 3) % 4);
-    [self animateSwipe:tabIndex withDirection:kAnimateLeft];
-}
-
-- (void)didSwipeLeft:(UISwipeGestureRecognizer *)recognizer {    
-    int tabIndex = ((self.tabBarItem.tag + 1) % 4);
-    [self animateSwipe:tabIndex withDirection:kAnimateRight];
-}
-
-- (void)animateSwipe:(int)newTabIndex withDirection:(AnimationDirection)direction {
-    // Get the views.
-    UIView * fromView = self.tabBarController.selectedViewController.view;
-    UIView * toView = [[self.tabBarController.viewControllers objectAtIndex:newTabIndex] view];    
-    // Get the size of the view area.
-    CGRect viewSize = fromView.frame;    
-    // Add the to view to the tab bar view.
-    [fromView.superview addSubview:toView];    
-    // Position it off screen.
-    toView.frame = CGRectMake((direction == kAnimateRight ? 320 : -320), viewSize.origin.y, 320, viewSize.size.height);
-    // Run the animation
-    [UIView animateWithDuration:0.3 
-                     animations: ^{                         
-                         // Animate the views on and off the screen. This will appear to slide.
-                         fromView.frame =CGRectMake((direction == kAnimateRight ? -320 : 320), viewSize.origin.y, 320, viewSize.size.height);
-                         toView.frame =CGRectMake(0, viewSize.origin.y, 320, viewSize.size.height);
-                     }     
-                     completion:^(BOOL finished) {
-                         if (finished) {                             
-                             // Remove the old view from the tabbar view.
-                             [fromView removeFromSuperview];
-                             self.tabBarController.selectedIndex = newTabIndex;                
-                         }
-                     }];
+    self.swipeGestures = nil;
 }
 
 #pragma mark - UIWebView and UIWebViewDelegate methods

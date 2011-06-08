@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+@interface AnimatedSwipeGestures : NSObject { }
 
-@interface AnimatedSwipeGestures : NSObject {
-}
-
+- (id)initWithController:(UITabBarController *)controller;
 - (void)didSwipeLeft:(UISwipeGestureRecognizer *)recognizer;
 - (void)didSwipeRight:(UISwipeGestureRecognizer *)recognizer;
 

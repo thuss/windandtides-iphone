@@ -10,28 +10,30 @@
 
 @interface AnimatedSwipeGestures()
 
-@property (nonatomic, assign) UIView *view;
 @property (nonatomic, assign) UITabBarController *controller;
+@property (nonatomic, assign) UIView *view;
 
 typedef enum { 
     kAnimateLeft, 
     kAnimateRight 
 } AnimationDirection;
 
+- (void)addSwipeGestureRecognizers;
 - (void)animateSwipe:(int)newTabIndex withDirection:(AnimationDirection)direction;
 
 @end
 
 @implementation AnimatedSwipeGestures
 
-@synthesize view=_view;
 @synthesize controller=_controller;
+@synthesize view=_view;
 
-- (id)initWithController:(UITabBarController *)controller view:(UIView *)view {
+- (id)initWithController:(UITabBarController *)controller {
     self = [super init];
     if (self) {
         self.controller = controller;
-        self.view = view;
+        self.view = controller.view;
+        [self addSwipeGestureRecognizers];
     }    
     return self;
 }
@@ -55,13 +57,13 @@ typedef enum {
 }
 
 - (void)didSwipeRight:(UISwipeGestureRecognizer *)recognizer {      
-    int tabIndex = ((self.controller.tabBarItem.tag + 3) % 4);
-    [self animateSwipe:tabIndex withDirection:kAnimateLeft];
+    int newTabIndex = (([self.controller selectedIndex] + 3) % 4);
+    [self animateSwipe:newTabIndex withDirection:kAnimateLeft];
 }
 
 - (void)didSwipeLeft:(UISwipeGestureRecognizer *)recognizer {    
-    int tabIndex = ((self.controller.tabBarItem.tag + 1) % 4);
-    [self animateSwipe:tabIndex withDirection:kAnimateRight];
+    int newTabIndex = (([self.controller selectedIndex] + 1) % 4);
+    [self animateSwipe:newTabIndex withDirection:kAnimateRight];
 }
 
 - (void)animateSwipe:(int)newTabIndex withDirection:(AnimationDirection)direction {
