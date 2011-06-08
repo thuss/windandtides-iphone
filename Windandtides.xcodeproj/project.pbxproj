@@ -45,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8B01EAAF139C240E00A64429 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		8B01EAAF139C240E00A64429 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = ../Entitlements.plist; sourceTree = "<group>"; };
 		8B4438FC139ED02C00185ECE /* AnimatedSwipeGestures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedSwipeGestures.h; sourceTree = "<group>"; };
 		8B4438FD139ED02C00185ECE /* AnimatedSwipeGestures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedSwipeGestures.m; sourceTree = "<group>"; };
 		8B72BAF0139D879F00913374 /* WindandtidesUrlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindandtidesUrlManager.h; sourceTree = "<group>"; };
@@ -53,10 +53,10 @@
 		8B88C16D138075E2007D1C2C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B88C16F138075E2007D1C2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8B88C171138075E2007D1C2C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8B88C175138075E2007D1C2C /* Windandtides-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Windandtides-Info.plist"; sourceTree = "<group>"; };
+		8B88C175138075E2007D1C2C /* Windandtides-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Windandtides-Info.plist"; path = "../Windandtides-Info.plist"; sourceTree = "<group>"; };
 		8B88C177138075E2007D1C2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8B88C179138075E2007D1C2C /* Windandtides-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Windandtides-Prefix.pch"; sourceTree = "<group>"; };
-		8B88C17A138075E2007D1C2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B88C179138075E2007D1C2C /* Windandtides-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Windandtides-Prefix.pch"; path = "../Windandtides-Prefix.pch"; sourceTree = "<group>"; };
+		8B88C17A138075E2007D1C2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
 		8B88C17C138075E2007D1C2C /* WindandtidesAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WindandtidesAppDelegate.h; sourceTree = "<group>"; };
 		8B88C17D138075E2007D1C2C /* WindandtidesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindandtidesAppDelegate.m; sourceTree = "<group>"; };
 		8B88C180138075E2007D1C2C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
@@ -117,11 +117,11 @@
 		8B88C15E138075E1007D1C2C = {
 			isa = PBXGroup;
 			children = (
-				8B4438FA139ECFA900185ECE /* Helpers */,
-				8B88C174138075E2007D1C2C /* Resources */,
 				8B88C1AB13807D1C007D1C2C /* Views */,
 				8B88C173138075E2007D1C2C /* Controllers */,
 				8BE8538B139D55B600041B34 /* Models */,
+				8B4438FA139ECFA900185ECE /* Helpers */,
+				8B88C174138075E2007D1C2C /* Resources */,
 				8B88C193138075E2007D1C2C /* Tests */,
 				8B88C16C138075E2007D1C2C /* Frameworks */,
 				8B88C16A138075E2007D1C2C /* Products */,
@@ -157,7 +157,7 @@
 				8B88C183138075E2007D1C2C /* WindandtidesViewController.m */,
 			);
 			name = Controllers;
-			path = Windandtides;
+			path = Windandtides/Controllers;
 			sourceTree = "<group>";
 		};
 		8B88C174138075E2007D1C2C /* Resources */ = {
@@ -176,7 +176,7 @@
 				8B01EAAF139C240E00A64429 /* Entitlements.plist */,
 			);
 			name = Resources;
-			path = Windandtides;
+			path = Windandtides/Resources;
 			sourceTree = "<group>";
 		};
 		8B88C193138075E2007D1C2C /* Tests */ = {
@@ -207,7 +207,7 @@
 				8B8C85301386FB6000697EBE /* MainWebView.xib */,
 			);
 			name = Views;
-			path = Windandtides/en.lproj;
+			path = Windandtides/Views;
 			sourceTree = "<group>";
 		};
 		8BE8538B139D55B600041B34 /* Models */ = {
@@ -217,7 +217,7 @@
 				8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */,
 			);
 			name = Models;
-			path = Windandtides;
+			path = Windandtides/Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +368,7 @@
 				8B88C177138075E2007D1C2C /* en */,
 			);
 			name = InfoPlist.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		8B88C17F138075E2007D1C2C /* MainWindow.xib */ = {
@@ -376,7 +377,6 @@
 				8B88C180138075E2007D1C2C /* en */,
 			);
 			name = MainWindow.xib;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		8B88C196138075E2007D1C2C /* InfoPlist.strings */ = {
