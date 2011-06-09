@@ -17,3 +17,5 @@ xcuserdata
 # TextMate
 *.tm_build_errors
 
+# Appcode
+.idea
