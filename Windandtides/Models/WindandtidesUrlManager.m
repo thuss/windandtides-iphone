@@ -7,6 +7,7 @@
 //
 
 #import "WindandtidesUrlManager.h"
+#import "Macros.h"
 
 @interface WindandtidesUrlManager ()
 
@@ -26,13 +27,14 @@
 - (id)init {
     self = [super init];
     if (self) {
-#define URL(uri) [NSString stringWithFormat:@"http://windandtides.com%@", uri]
-#define NUM(x) [NSNumber numberWithInt: x]
+        NSString *(^url)(NSString *) = ^(NSString *uri) { 
+            return (NSString *)[NSString stringWithFormat:@"http://windandtides.com%@", uri]; 
+        };
         self.pages = [NSDictionary dictionaryWithObjectsAndKeys:
-        URL(@"/marine/forecast"), NUM(kForecast),
-                URL(@"/marine/tide"), NUM(kTidesAndCurrents),
-                URL(@"/marine/wind/Angel+Island"), NUM(kAngelIslandWinds),
-                URL(@"/marine/wind/Golden+Gate"), NUM(kGoldenGateWinds),
+                url(@"/marine/forecast"), NUM(kForecast),
+                url(@"/marine/tide"), NUM(kTidesAndCurrents),
+                url(@"/marine/wind/Angel+Island"), NUM(kAngelIslandWinds),
+                url(@"/marine/wind/Golden+Gate"), NUM(kGoldenGateWinds),
                 nil];
     }
     return self;

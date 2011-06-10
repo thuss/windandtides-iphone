@@ -10,6 +10,7 @@
 #define HC_SHORTHAND
 #import <OCHamcrestIOS/OCHamcrestIOS.h>
 #import "WindandtidesUrlManager.h"
+#import "Macros.h"
 
 @interface WindandtidesUrlManagerTests: SenTestCase {}
 @end
@@ -30,11 +31,10 @@ WindandtidesUrlManager *urlManager;
 }
 
 - (void)testConstantsExist {        
-    NSNumber* (^constant)(int) = ^(int i) { return [NSNumber numberWithInt:i]; };
-    assertThat(constant(kForecast), equalTo(constant(0)));
-    assertThat(constant(kTidesAndCurrents), equalTo(constant(1)));
-    assertThat(constant(kAngelIslandWinds), equalTo(constant(2)));
-    assertThat(constant(kGoldenGateWinds), equalTo(constant(3)));    
+    assertThat(NUM(kForecast), equalTo(NUM(0)));
+    assertThat(NUM(kTidesAndCurrents), equalTo(NUM(1)));
+    assertThat(NUM(kAngelIslandWinds), equalTo(NUM(2)));
+    assertThat(NUM(kGoldenGateWinds), equalTo(NUM(3)));    
 }
 
 - (void)testUrlsExistForConstants {

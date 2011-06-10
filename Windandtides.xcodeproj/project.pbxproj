@@ -75,6 +75,7 @@
 		8BC54B23138DCCEC005E74F4 /* windvane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windvane.png; sourceTree = "<group>"; };
 		8BC54B25138DCDB8005E74F4 /* monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor.png; sourceTree = "<group>"; };
 		8BC54B27138DE079005E74F4 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
+		8BE0277B13A2D42800CB1FFA /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManagerTests.m; sourceTree = "<group>"; };
 		8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +110,7 @@
 			children = (
 				8B4438FC139ED02C00185ECE /* AnimatedSwipeGestures.h */,
 				8B4438FD139ED02C00185ECE /* AnimatedSwipeGestures.m */,
+				8BE0277B13A2D42800CB1FFA /* Macros.h */,
 			);
 			name = Helpers;
 			path = Windandtides/Helpers;
