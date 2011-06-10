@@ -7,21 +7,19 @@
 //
 
 #import "WindandtidesAppDelegate.h"
-#import "WindandtidesViewController.h"
 
 @implementation WindandtidesAppDelegate
 
-@synthesize window=_window;
-@synthesize tabBarController=_tabBarController;
+@synthesize window = _window;
+@synthesize tabBarController = _tabBarController;
 
 - (void)configureUserAgent {
-    NSDictionary *dictionnary = [NSDictionary dictionaryWithObjectsAndKeys:
-                                 @"Windandtides Mobile App iPhone Mobile//Safari", @"UserAgent", nil];
+    NSDictionary *dictionnary = [NSDictionary dictionaryWithObjectsAndKeys:@"Windandtides Mobile App iPhone Mobile//Safari", @"UserAgent", nil];
     [[NSUserDefaults standardUserDefaults] registerDefaults:dictionnary];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self configureUserAgent];     
+    [self configureUserAgent];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

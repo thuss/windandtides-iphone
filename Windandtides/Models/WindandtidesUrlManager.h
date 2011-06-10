@@ -8,15 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WindandtidesUrlManager : NSObject { }
+@interface WindandtidesUrlManager : NSObject {
+}
 
-typedef enum { 
-    kForecast, 
+typedef enum {
+    kForecast,
     kTidesAndCurrents,
     kAngelIslandWinds,
     kGoldenGateWinds
-} WindandtidesPages;  
+} WindandtidesPages;
 
--(NSString *)urlFor:(WindandtidesPages)page;
+- (NSString *)urlFor:(WindandtidesPages)page;
 
 @end
