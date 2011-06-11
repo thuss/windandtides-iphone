@@ -19,7 +19,6 @@ WindandtidesUrlManager *urlManager;
 
 @implementation WindandtidesUrlManagerTests
 
-
 - (void)setUp {
     [super setUp];
     urlManager = [[WindandtidesUrlManager alloc] init];

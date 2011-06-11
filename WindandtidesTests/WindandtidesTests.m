@@ -25,8 +25,8 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    assertThat(@"foo", equalTo(@"foo"));
+- (void)testAppDelegate {    
+    assertThat([[UIApplication sharedApplication] delegate], notNilValue());    
 }
 
 @end

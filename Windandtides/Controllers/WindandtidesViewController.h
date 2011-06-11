@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WindandtidesUrlManager.h"
+#import "AnimatedSwipeGestures.h"
 
 @interface WindandtidesViewController : UIViewController <UIWebViewDelegate, UIAlertViewDelegate> {
 }
 
 @property(nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property(nonatomic, retain) IBOutlet UIWebView *mainWebView;
+@property(nonatomic, retain) WindandtidesUrlManager *urlManager;
+@property(nonatomic, retain) AnimatedSwipeGestures *swipeGestures;
+
+- (void)loadWebView:(int)tabIndex;
 
 @end

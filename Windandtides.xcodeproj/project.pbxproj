@@ -30,6 +30,7 @@
 		8BC54B24138DCCEC005E74F4 /* windvane.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B23138DCCEC005E74F4 /* windvane.png */; };
 		8BC54B26138DCDB8005E74F4 /* monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B25138DCDB8005E74F4 /* monitor.png */; };
 		8BC54B28138DE079005E74F4 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B27138DE079005E74F4 /* reload.png */; };
+		8BE0278013A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE0277F13A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m */; };
 		8BE85392139D57EB00041B34 /* WindandtidesUrlManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTests.m */; };
 		8BE85395139D59B700041B34 /* WindandtidesUrlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		8BC54B25138DCDB8005E74F4 /* monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor.png; sourceTree = "<group>"; };
 		8BC54B27138DE079005E74F4 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
 		8BE0277B13A2D42800CB1FFA /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		8BE0277F13A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesViewControllerTest.m; sourceTree = "<group>"; };
 		8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManagerTests.m; sourceTree = "<group>"; };
 		8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +189,7 @@
 				8B88C19C138075E2007D1C2C /* WindandtidesTests.m */,
 				8B88C194138075E2007D1C2C /* Supporting Files */,
 				8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTests.m */,
+				8BE0277F13A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m */,
 			);
 			name = Tests;
 			path = WindandtidesTests;
@@ -350,6 +353,7 @@
 			files = (
 				8B88C19D138075E2007D1C2C /* WindandtidesTests.m in Sources */,
 				8BE85392139D57EB00041B34 /* WindandtidesUrlManagerTests.m in Sources */,
+				8BE0278013A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

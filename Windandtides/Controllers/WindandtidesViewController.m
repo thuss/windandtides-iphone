@@ -7,17 +7,6 @@
 //
 
 #import "WindandtidesViewController.h"
-#import "WindandtidesUrlManager.h"
-#import "AnimatedSwipeGestures.h"
-
-@interface WindandtidesViewController ()
-
-@property(nonatomic, retain) WindandtidesUrlManager *urlManager;
-@property(nonatomic, retain) AnimatedSwipeGestures *swipeGestures;
-
-- (void)loadWebView:(int)tabIndex;
-
-@end
 
 @implementation WindandtidesViewController
 
