@@ -9,6 +9,7 @@
 #import <SenTestingKit/SenTestingKit.h>
 #define HC_SHORTHAND
 #import <OCHamcrestIOS/OCHamcrestIOS.h>
+#import <OCMock/OCMock.h>
 #import "WindandtidesViewController.h"
 #import "Macros.h"
 
@@ -35,8 +36,16 @@ WindandtidesViewController *controller;
     assertThat(controller.activityIndicator, notNilValue());
 }
 
-- (void)testLoadView {     
-    [controller loadView];
+- (void)testViewDidLoad {       
+    id mockWebView = [OCMockObject mockForClass:[UIWebView class]];
+    [[mockWebView expect] loadRequest:[OCMArg checkWithBlock:^(id request) { 
+        NSString *url = ((NSURLRequest *)request).URL.absoluteString;
+        assertThat(url, equalTo(@"http://windandtides.com/marine/forecast"));
+        return YES; 
+    }]];
+    controller.mainWebView = mockWebView;
+    [controller viewDidLoad];
+    [mockWebView verify];
 }
 
 @end

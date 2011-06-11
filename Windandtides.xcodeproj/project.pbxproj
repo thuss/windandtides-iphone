@@ -31,6 +31,7 @@
 		8BC54B26138DCDB8005E74F4 /* monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B25138DCDB8005E74F4 /* monitor.png */; };
 		8BC54B28138DE079005E74F4 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B27138DE079005E74F4 /* reload.png */; };
 		8BE0278013A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE0277F13A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m */; };
+		8BE027A413A2FD2500CB1FFA /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE027A313A2FD2500CB1FFA /* libOCMock.a */; };
 		8BE85392139D57EB00041B34 /* WindandtidesUrlManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTests.m */; };
 		8BE85395139D59B700041B34 /* WindandtidesUrlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,13 @@
 		8BC54B27138DE079005E74F4 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
 		8BE0277B13A2D42800CB1FFA /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		8BE0277F13A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesViewControllerTest.m; sourceTree = "<group>"; };
+		8BE027A313A2FD2500CB1FFA /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		8BE027B113A3015F00CB1FFA /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		8BE027B213A3015F00CB1FFA /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
+		8BE027B313A3015F00CB1FFA /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		8BE027B413A3015F00CB1FFA /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		8BE027B513A3015F00CB1FFA /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		8BE027B613A3015F00CB1FFA /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
 		8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManagerTests.m; sourceTree = "<group>"; };
 		8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +109,7 @@
 				8B88C18F138075E2007D1C2C /* Foundation.framework in Frameworks */,
 				8B88C190138075E2007D1C2C /* CoreGraphics.framework in Frameworks */,
 				8B88C1AA1380783F007D1C2C /* OCHamcrestIOS.framework in Frameworks */,
+				8BE027A413A2FD2500CB1FFA /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +130,7 @@
 		8B88C15E138075E1007D1C2C = {
 			isa = PBXGroup;
 			children = (
+				8BE0278F13A2FC3400CB1FFA /* Libraries */,
 				8B88C1AB13807D1C007D1C2C /* Views */,
 				8B88C173138075E2007D1C2C /* Controllers */,
 				8BE8538B139D55B600041B34 /* Models */,
@@ -213,6 +223,28 @@
 			);
 			name = Views;
 			path = Windandtides/Views;
+			sourceTree = "<group>";
+		};
+		8BE0278F13A2FC3400CB1FFA /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8BE0279A13A2FD0700CB1FFA /* OCMock */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		8BE0279A13A2FD0700CB1FFA /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				8BE027B113A3015F00CB1FFA /* OCMConstraint.h */,
+				8BE027B213A3015F00CB1FFA /* OCMockRecorder.h */,
+				8BE027B313A3015F00CB1FFA /* OCMockObject.h */,
+				8BE027B413A3015F00CB1FFA /* OCMock.h */,
+				8BE027B513A3015F00CB1FFA /* OCMArg.h */,
+				8BE027B613A3015F00CB1FFA /* NSNotificationCenter+OCMAdditions.h */,
+				8BE027A313A2FD2500CB1FFA /* libOCMock.a */,
+			);
+			path = OCMock;
 			sourceTree = "<group>";
 		};
 		8BE8538B139D55B600041B34 /* Models */ = {
@@ -439,12 +471,20 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WindandtidesTests/WindandtidesTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries\"/**";
 				INFOPLIST_FILE = "WindandtidesTests/WindandtidesTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+					"\"$(SRCROOT)/Libraries/OCMock\"",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					SenTestingKit,
 					"-lstdc++",
 					"-ObjC",
+					"-force_load",
+					"$(PROJECT_DIR)/Libraries/OCMock/libOCMock.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -524,12 +564,20 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WindandtidesTests/WindandtidesTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries\"/**";
 				INFOPLIST_FILE = "WindandtidesTests/WindandtidesTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+					"\"$(SRCROOT)/Libraries/OCMock\"",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					SenTestingKit,
 					"-lstdc++",
 					"-ObjC",
+					"-force_load",
+					"$(PROJECT_DIR)/Libraries/OCMock/libOCMock.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -549,12 +597,20 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WindandtidesTests/WindandtidesTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries\"/**";
 				INFOPLIST_FILE = "WindandtidesTests/WindandtidesTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+					"\"$(SRCROOT)/Libraries/OCMock\"",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					SenTestingKit,
 					"-lstdc++",
 					"-ObjC",
+					"-force_load",
+					"$(PROJECT_DIR)/Libraries/OCMock/libOCMock.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
