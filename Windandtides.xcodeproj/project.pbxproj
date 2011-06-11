@@ -130,7 +130,6 @@
 		8B88C15E138075E1007D1C2C = {
 			isa = PBXGroup;
 			children = (
-				8BE0278F13A2FC3400CB1FFA /* Libraries */,
 				8B88C1AB13807D1C007D1C2C /* Views */,
 				8B88C173138075E2007D1C2C /* Controllers */,
 				8BE8538B139D55B600041B34 /* Models */,
@@ -138,6 +137,7 @@
 				8B88C174138075E2007D1C2C /* Resources */,
 				8B88C193138075E2007D1C2C /* Tests */,
 				8B88C16C138075E2007D1C2C /* Frameworks */,
+				8BE0278F13A2FC3400CB1FFA /* Libraries */,
 				8B88C16A138075E2007D1C2C /* Products */,
 			);
 			sourceTree = "<group>";
