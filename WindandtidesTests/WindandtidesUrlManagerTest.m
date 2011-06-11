@@ -12,12 +12,12 @@
 #import "WindandtidesUrlManager.h"
 #import "Macros.h"
 
-@interface WindandtidesUrlManagerTests: SenTestCase {}
+@interface WindandtidesUrlManagerTest: SenTestCase {}
 @end
 
-WindandtidesUrlManager *urlManager;
+@implementation WindandtidesUrlManagerTest
 
-@implementation WindandtidesUrlManagerTests
+WindandtidesUrlManager *urlManager;
 
 - (void)setUp {
     [super setUp];

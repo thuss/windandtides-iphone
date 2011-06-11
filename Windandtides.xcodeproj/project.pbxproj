@@ -21,7 +21,7 @@
 		8B88C18F138075E2007D1C2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C16F138075E2007D1C2C /* Foundation.framework */; };
 		8B88C190138075E2007D1C2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C171138075E2007D1C2C /* CoreGraphics.framework */; };
 		8B88C198138075E2007D1C2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B88C196138075E2007D1C2C /* InfoPlist.strings */; };
-		8B88C19D138075E2007D1C2C /* WindandtidesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B88C19C138075E2007D1C2C /* WindandtidesTests.m */; };
+		8B88C19D138075E2007D1C2C /* WindandtidesAppDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B88C19C138075E2007D1C2C /* WindandtidesAppDelegateTest.m */; };
 		8B88C1AA1380783F007D1C2C /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C1A91380783F007D1C2C /* OCHamcrestIOS.framework */; };
 		8B8C85311386FB6000697EBE /* MainWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C85301386FB6000697EBE /* MainWebView.xib */; };
 		8BAA465D138D6BA500F9165B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA465C138D6BA500F9165B /* Default.png */; };
@@ -32,7 +32,7 @@
 		8BC54B28138DE079005E74F4 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B27138DE079005E74F4 /* reload.png */; };
 		8BE0278013A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE0277F13A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m */; };
 		8BE027A413A2FD2500CB1FFA /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE027A313A2FD2500CB1FFA /* libOCMock.a */; };
-		8BE85392139D57EB00041B34 /* WindandtidesUrlManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTests.m */; };
+		8BE85392139D57EB00041B34 /* WindandtidesUrlManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTest.m */; };
 		8BE85395139D59B700041B34 /* WindandtidesUrlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +68,7 @@
 		8B88C195138075E2007D1C2C /* WindandtidesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WindandtidesTests-Info.plist"; sourceTree = "<group>"; };
 		8B88C197138075E2007D1C2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B88C199138075E2007D1C2C /* WindandtidesTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WindandtidesTests-Prefix.pch"; sourceTree = "<group>"; };
-		8B88C19C138075E2007D1C2C /* WindandtidesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindandtidesTests.m; sourceTree = "<group>"; };
+		8B88C19C138075E2007D1C2C /* WindandtidesAppDelegateTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindandtidesAppDelegateTest.m; sourceTree = "<group>"; };
 		8B88C1A91380783F007D1C2C /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		8B8C85301386FB6000697EBE /* MainWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWebView.xib; sourceTree = "<group>"; };
 		8BAA465C138D6BA500F9165B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		8BE027B413A3015F00CB1FFA /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
 		8BE027B513A3015F00CB1FFA /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
 		8BE027B613A3015F00CB1FFA /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
-		8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManagerTests.m; sourceTree = "<group>"; };
+		8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManagerTest.m; sourceTree = "<group>"; };
 		8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,9 +196,9 @@
 		8B88C193138075E2007D1C2C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8B88C19C138075E2007D1C2C /* WindandtidesTests.m */,
 				8B88C194138075E2007D1C2C /* Supporting Files */,
-				8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTests.m */,
+				8B88C19C138075E2007D1C2C /* WindandtidesAppDelegateTest.m */,
+				8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTest.m */,
 				8BE0277F13A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m */,
 			);
 			name = Tests;
@@ -383,8 +383,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B88C19D138075E2007D1C2C /* WindandtidesTests.m in Sources */,
-				8BE85392139D57EB00041B34 /* WindandtidesUrlManagerTests.m in Sources */,
+				8B88C19D138075E2007D1C2C /* WindandtidesAppDelegateTest.m in Sources */,
+				8BE85392139D57EB00041B34 /* WindandtidesUrlManagerTest.m in Sources */,
 				8BE0278013A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
