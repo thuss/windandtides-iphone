@@ -22,7 +22,7 @@ WindandtidesViewController *controller;
 
 - (void)setUp {
     [super setUp];
-    controller = [[WindandtidesViewController alloc] initWithNibName:@"MainWebView" bundle:nil];
+    controller = [[WindandtidesViewController alloc] init];
 }
 
 - (void)tearDown {
@@ -30,7 +30,7 @@ WindandtidesViewController *controller;
     [super tearDown];
 }
 
-- (void)testIBOutletsAreConnectedToNib {
+- (void)testOutletsAreConnectedToNib {
     [controller loadView];
     assertThat(controller.mainWebView, notNilValue());
     assertThat(controller.activityIndicator, notNilValue());

@@ -37,7 +37,7 @@ WindandtidesUrlManager *urlManager;
 }
 
 - (void)testUrlsExistForConstants {
-    assertThat([urlManager urlFor:kForecast], startsWith(@"http://"));
+    assertThat([urlManager urlFor:kForecast], startsWith(@"http://windandtides"));
     assertThat([urlManager urlFor:kTidesAndCurrents], startsWith(@"http://"));
     assertThat([urlManager urlFor:kAngelIslandWinds], startsWith(@"http://"));
     assertThat([urlManager urlFor:kGoldenGateWinds], startsWith(@"http://"));    

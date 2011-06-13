@@ -10,6 +10,7 @@
 #define HC_SHORTHAND
 #import <OCHamcrestIOS/OCHamcrestIOS.h>
 #import "WindandtidesAppDelegate.h"
+#import "WindandtidesViewController.h"
 #import "Macros.h"
 
 @interface WindandtidesAppDelegateTest : SenTestCase {}
@@ -29,8 +30,24 @@ WindandtidesAppDelegate *appDelegate;
     [super tearDown];
 }
 
-- (void)testForWindandtidesAppDelegate { 
+- (void)testWindandtidesAppDelegate { 
     assertThat([appDelegate class], equalTo([WindandtidesAppDelegate class]));    
+}
+
+- (void)testOutletsAreConnectedToNib {
+    assertThat(appDelegate.window, notNilValue());
+    assertThat(appDelegate.tabBarController, notNilValue());
+}
+
+- (void)testThatForecastIsTheFirstTab {
+    assertThat([appDelegate.tabBarController.selectedViewController title], equalTo(@"Forecast"));    
+}
+
+- (void)testEachTabWiredToViewController {
+    UITabBarController *controller = appDelegate.tabBarController;
+    assertThat(controller.selectedViewController, notNilValue());
+    assertThat(controller.viewControllers, hasCountOf(4));
+    for (id c in controller.viewControllers) assertThat(c, instanceOf([WindandtidesViewController class]));
 }
 
 @end

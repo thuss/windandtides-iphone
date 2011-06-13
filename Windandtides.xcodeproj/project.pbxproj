@@ -23,7 +23,7 @@
 		8B88C198138075E2007D1C2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B88C196138075E2007D1C2C /* InfoPlist.strings */; };
 		8B88C19D138075E2007D1C2C /* WindandtidesAppDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B88C19C138075E2007D1C2C /* WindandtidesAppDelegateTest.m */; };
 		8B88C1AA1380783F007D1C2C /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C1A91380783F007D1C2C /* OCHamcrestIOS.framework */; };
-		8B8C85311386FB6000697EBE /* MainWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C85301386FB6000697EBE /* MainWebView.xib */; };
+		8B8C85311386FB6000697EBE /* WindandtidesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C85301386FB6000697EBE /* WindandtidesView.xib */; };
 		8BAA465D138D6BA500F9165B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA465C138D6BA500F9165B /* Default.png */; };
 		8BAA4660138D6DA600F9165B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA465F138D6DA600F9165B /* icon.png */; };
 		8BC54B17138DCAD3005E74F4 /* trend.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B16138DCAD3005E74F4 /* trend.png */; };
@@ -70,7 +70,7 @@
 		8B88C199138075E2007D1C2C /* WindandtidesTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WindandtidesTests-Prefix.pch"; sourceTree = "<group>"; };
 		8B88C19C138075E2007D1C2C /* WindandtidesAppDelegateTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindandtidesAppDelegateTest.m; sourceTree = "<group>"; };
 		8B88C1A91380783F007D1C2C /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrestIOS.framework; sourceTree = "<group>"; };
-		8B8C85301386FB6000697EBE /* MainWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWebView.xib; sourceTree = "<group>"; };
+		8B8C85301386FB6000697EBE /* WindandtidesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindandtidesView.xib; sourceTree = "<group>"; };
 		8BAA465C138D6BA500F9165B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8BAA465F138D6DA600F9165B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		8BC54B16138DCAD3005E74F4 /* trend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trend.png; sourceTree = "<group>"; };
@@ -219,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				8B88C17F138075E2007D1C2C /* MainWindow.xib */,
-				8B8C85301386FB6000697EBE /* MainWebView.xib */,
+				8B8C85301386FB6000697EBE /* WindandtidesView.xib */,
 			);
 			name = Views;
 			path = Windandtides/Views;
@@ -329,7 +329,7 @@
 			files = (
 				8B88C178138075E2007D1C2C /* InfoPlist.strings in Resources */,
 				8B88C181138075E2007D1C2C /* MainWindow.xib in Resources */,
-				8B8C85311386FB6000697EBE /* MainWebView.xib in Resources */,
+				8B8C85311386FB6000697EBE /* WindandtidesView.xib in Resources */,
 				8BAA465D138D6BA500F9165B /* Default.png in Resources */,
 				8BAA4660138D6DA600F9165B /* icon.png in Resources */,
 				8BC54B17138DCAD3005E74F4 /* trend.png in Resources */,
