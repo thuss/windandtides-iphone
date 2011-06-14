@@ -45,13 +45,18 @@
     self.swipeGestures = nil;
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return NO;
+}
+
 #pragma mark - UIWebView and UIWebViewDelegate methods
 
 - (void)loadWebView:(int)tabIndex {
     WindandtidesPages pageForTab[4] = {kForecast, kTidesAndCurrents, kAngelIslandWinds, kGoldenGateWinds};
     WindandtidesPages page = pageForTab[tabIndex];
-    NSURL *url = [NSURL URLWithString:[self.urlManager urlFor:page]];
+    NSURL *url = [NSURL URLWithString:[self.urlManager urlFor:page]];    
     [self.mainWebView loadRequest:[NSURLRequest requestWithURL:url]];
+    
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {

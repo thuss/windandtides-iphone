@@ -26,6 +26,9 @@
 		8B8C85311386FB6000697EBE /* WindandtidesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C85301386FB6000697EBE /* WindandtidesView.xib */; };
 		8BAA465D138D6BA500F9165B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA465C138D6BA500F9165B /* Default.png */; };
 		8BAA4660138D6DA600F9165B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA465F138D6DA600F9165B /* icon.png */; };
+		8BB80EDE13A6EB8900C0C4C5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB80EDD13A6EB8900C0C4C5 /* Default@2x.png */; };
+		8BB80EE013A6EBCD00C0C4C5 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB80EDF13A6EBCD00C0C4C5 /* Default-Portrait~ipad.png */; };
+		8BB80EE413A6ED5400C0C4C5 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB80EE313A6ED5400C0C4C5 /* Default-Landscape~ipad.png */; };
 		8BC54B17138DCAD3005E74F4 /* trend.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B16138DCAD3005E74F4 /* trend.png */; };
 		8BC54B24138DCCEC005E74F4 /* windvane.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B23138DCCEC005E74F4 /* windvane.png */; };
 		8BC54B26138DCDB8005E74F4 /* monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B25138DCDB8005E74F4 /* monitor.png */; };
@@ -73,6 +76,9 @@
 		8B8C85301386FB6000697EBE /* WindandtidesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindandtidesView.xib; sourceTree = "<group>"; };
 		8BAA465C138D6BA500F9165B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8BAA465F138D6DA600F9165B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		8BB80EDD13A6EB8900C0C4C5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8BB80EDF13A6EBCD00C0C4C5 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		8BB80EE313A6ED5400C0C4C5 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "Windandtides/Resources/Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		8BC54B16138DCAD3005E74F4 /* trend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trend.png; sourceTree = "<group>"; };
 		8BC54B23138DCCEC005E74F4 /* windvane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windvane.png; sourceTree = "<group>"; };
 		8BC54B25138DCDB8005E74F4 /* monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor.png; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 		8B88C15E138075E1007D1C2C = {
 			isa = PBXGroup;
 			children = (
+				8BB80EE313A6ED5400C0C4C5 /* Default-Landscape~ipad.png */,
 				8B88C1AB13807D1C007D1C2C /* Views */,
 				8B88C173138075E2007D1C2C /* Controllers */,
 				8BE8538B139D55B600041B34 /* Models */,
@@ -177,6 +184,8 @@
 		8B88C174138075E2007D1C2C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8BB80EDF13A6EBCD00C0C4C5 /* Default-Portrait~ipad.png */,
+				8BB80EDD13A6EB8900C0C4C5 /* Default@2x.png */,
 				8BC54B27138DE079005E74F4 /* reload.png */,
 				8BC54B25138DCDB8005E74F4 /* monitor.png */,
 				8BC54B23138DCCEC005E74F4 /* windvane.png */,
@@ -337,6 +346,9 @@
 				8BC54B26138DCDB8005E74F4 /* monitor.png in Resources */,
 				8BC54B28138DE079005E74F4 /* reload.png in Resources */,
 				8B01EAB0139C240E00A64429 /* Entitlements.plist in Resources */,
+				8BB80EDE13A6EB8900C0C4C5 /* Default@2x.png in Resources */,
+				8BB80EE013A6EBCD00C0C4C5 /* Default-Portrait~ipad.png in Resources */,
+				8BB80EE413A6ED5400C0C4C5 /* Default-Landscape~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +453,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = "Ad Hoc";
 		};
@@ -453,7 +466,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Windandtides/Windandtides-Prefix.pch";
 				INFOPLIST_FILE = "Windandtides/Windandtides-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -506,6 +521,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -521,6 +537,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -533,7 +550,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Windandtides/Windandtides-Prefix.pch";
 				INFOPLIST_FILE = "Windandtides/Windandtides-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -546,7 +565,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Windandtides/Windandtides-Prefix.pch";
 				INFOPLIST_FILE = "Windandtides/Windandtides-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
