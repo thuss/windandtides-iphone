@@ -14,6 +14,7 @@
 }
 
 @property(nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property(nonatomic, retain) IBOutlet UIButton *reloadButton;
 @property(nonatomic, retain) IBOutlet UIWebView *mainWebView;
 @property(nonatomic, retain) WindandtidesUrlManager *urlManager;
 @property(nonatomic, retain) AnimatedSwipeGestures *swipeGestures;

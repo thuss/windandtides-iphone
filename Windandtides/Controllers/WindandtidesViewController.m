@@ -11,38 +11,36 @@
 @implementation WindandtidesViewController
 
 @synthesize activityIndicator = _activityIndicator;
+@synthesize reloadButton = _reloadButton;
 @synthesize mainWebView = _mainWebView;
 @synthesize urlManager = _urlManager;
 @synthesize swipeGestures = _swipeGestures;
 
 - (void)dealloc {
     [_activityIndicator release];
+    [_reloadButton release];
     [_mainWebView release];
     [_urlManager release];
     [_swipeGestures release];
     [super dealloc];
 }
 
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-}
-
 #pragma mark - View lifecycle
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    self.activityIndicator = nil;
+    self.reloadButton = nil;
+    self.mainWebView = nil;
+    self.urlManager = nil;
+    self.swipeGestures = nil;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.urlManager = [[[WindandtidesUrlManager alloc] init] autorelease];
     [self loadWebView:self.tabBarItem.tag];
     self.swipeGestures = [[[AnimatedSwipeGestures alloc] initWithController:self.tabBarController] autorelease];
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    self.activityIndicator = nil;
-    self.mainWebView = nil;
-    self.urlManager = nil;
-    self.swipeGestures = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -67,6 +65,7 @@
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
+    [self.reloadButton setHidden:YES];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [self.activityIndicator startAnimating];
 }
@@ -74,6 +73,7 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [self.activityIndicator stopAnimating];
+    [self.reloadButton setHidden:NO];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
