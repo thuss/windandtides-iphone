@@ -7,11 +7,18 @@
 //
 
 #import "WindandtidesAppDelegate.h"
+#import "WindandtidesViewController.h"
 
 @implementation WindandtidesAppDelegate
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
+
+- (void)dealloc {
+    [_window release];
+    [_tabBarController release];
+    [super dealloc];
+}
 
 - (void)configureUserAgent {
     NSDictionary *dictionnary = [NSDictionary dictionaryWithObjectsAndKeys:@"Windandtides Mobile App iPhone Mobile//Safari", @"UserAgent", nil];
@@ -25,10 +32,8 @@
     return YES;
 }
 
-- (void)dealloc {
-    [_window release];
-    [_tabBarController release];
-    [super dealloc];
+- (void) applicationWillEnterForeground:(UIApplication *)application {
+    [((WindandtidesViewController *)self.tabBarController.selectedViewController) reloadWebViews:nil];
 }
 
 @end

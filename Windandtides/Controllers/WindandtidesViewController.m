@@ -59,6 +59,13 @@
     
 }
 
+- (IBAction)reloadWebViews:(UIButton *)button {
+    [self.mainWebView reload]; // Start with our webview, then call reload on others
+    for (WindandtidesViewController *controller in self.tabBarController.viewControllers) {
+        if (controller != self) [controller.mainWebView reload];
+    }
+}
+
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [self.activityIndicator startAnimating];
@@ -77,11 +84,13 @@
         NSURL *url = [NSURL URLWithString:[error.userInfo objectForKey:@"NSErrorFailingURLStringKey"]];
         [self.mainWebView loadHTMLString:nil baseURL:url];
     }
-    // Show the alert
-    [[[[UIAlertView alloc] initWithTitle:@"Network Error"
-                                 message:@"Do you you want to retry?" delegate:self
-                       cancelButtonTitle:@"Retry"
-                       otherButtonTitles:@"Cancel", nil] autorelease] show];
+    // Show the alert if we're the currently selected controller
+    if([[[self tabBarController] selectedViewController] isEqual:self]) {
+        [[[[UIAlertView alloc] initWithTitle:@"Network Error"
+                                     message:@"Do you you want to retry?" delegate:self
+                           cancelButtonTitle:@"Retry"
+                           otherButtonTitles:@"Cancel", nil] autorelease] show];
+    }
 }
 
 # pragma mark - UIAlertViewDelegate methods
@@ -89,7 +98,7 @@
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     int retryButtonIndex = 0;
     if (buttonIndex == retryButtonIndex) {
-        [self.mainWebView reload];
+        [self reloadWebViews:nil];
     }
 }
 

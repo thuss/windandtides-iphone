@@ -11,7 +11,6 @@
 @class WindandtidesViewController;
 
 @interface WindandtidesAppDelegate : NSObject <UIApplicationDelegate> {
-
 }
 
 @property(nonatomic, retain) IBOutlet UIWindow *window;

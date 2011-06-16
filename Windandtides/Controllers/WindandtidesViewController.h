@@ -18,6 +18,8 @@
 @property(nonatomic, retain) WindandtidesUrlManager *urlManager;
 @property(nonatomic, retain) AnimatedSwipeGestures *swipeGestures;
 
+- (IBAction)reloadWebViews:(UIButton *)button;
+
 - (void)loadWebView:(int)tabIndex;
 
 @end
