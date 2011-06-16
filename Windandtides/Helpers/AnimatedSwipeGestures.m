@@ -11,7 +11,8 @@
 @interface AnimatedSwipeGestures ()
 
 @property(nonatomic, assign) UITabBarController *controller;
-@property(nonatomic, assign) UIView *view;
+@property(nonatomic, assign) UISwipeGestureRecognizer *recognizerLeft;
+@property(nonatomic, assign) UISwipeGestureRecognizer *recognizerRight;
 
 typedef enum {
     kAnimateLeft,
@@ -27,13 +28,13 @@ typedef enum {
 @implementation AnimatedSwipeGestures
 
 @synthesize controller = _controller;
-@synthesize view = _view;
+@synthesize recognizerLeft = _recognizerLeft;
+@synthesize recognizerRight = _recognizerRight;
 
 - (id)initWithController:(UITabBarController *)controller {
     self = [super init];
     if (self) {
         self.controller = controller;
-        self.view = controller.view;
         [self addSwipeGestureRecognizers];
     }
     return self;
@@ -41,20 +42,19 @@ typedef enum {
 
 - (void)dealloc {
     // view and controller aren't retained, no need to release
+    [self.controller.view removeGestureRecognizer:self.recognizerLeft];
+    [self.controller.view removeGestureRecognizer:self.recognizerRight];
     [super dealloc];
 }
 
 - (void)addSwipeGestureRecognizers {
-    UISwipeGestureRecognizer *recognizerLeft;
-    recognizerLeft = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)] autorelease];
-    recognizerLeft.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:recognizerLeft];
+    self.recognizerLeft = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeLeft:)] autorelease];
+    self.recognizerLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.controller.view addGestureRecognizer:self.recognizerLeft];
 
-    UISwipeGestureRecognizer *recognizerRight;
-    recognizerRight = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight:)] autorelease];
-    recognizerRight.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:recognizerRight];
-
+    self.recognizerRight = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeRight:)] autorelease];
+    self.recognizerRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.controller.view addGestureRecognizer:self.recognizerRight];
 }
 
 - (void)didSwipeRight:(UISwipeGestureRecognizer *)recognizer {

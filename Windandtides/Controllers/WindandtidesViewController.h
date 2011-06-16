@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "WindandtidesUrlManager.h"
 #import "AnimatedSwipeGestures.h"
+#import "MBProgressHUD.h"
 
 @interface WindandtidesViewController : UIViewController <UIWebViewDelegate, UIAlertViewDelegate> {
 }
 
-@property(nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property(nonatomic, retain) IBOutlet UIButton *reloadButton;
 @property(nonatomic, retain) IBOutlet UIWebView *mainWebView;
+@property(nonatomic, retain) MBProgressHUD *activityIndicator;
 @property(nonatomic, retain) WindandtidesUrlManager *urlManager;
 @property(nonatomic, retain) AnimatedSwipeGestures *swipeGestures;
 

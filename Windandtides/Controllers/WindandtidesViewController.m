@@ -38,6 +38,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.activityIndicator = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:self.activityIndicator];
     self.urlManager = [[[WindandtidesUrlManager alloc] init] autorelease];
     [self loadWebView:self.tabBarItem.tag];
     self.swipeGestures = [[[AnimatedSwipeGestures alloc] initWithController:self.tabBarController] autorelease];
@@ -67,18 +69,18 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     [self.reloadButton setHidden:YES];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    [self.activityIndicator startAnimating];
+    [self.activityIndicator show:YES];    
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    [self.activityIndicator stopAnimating];
+    [self.activityIndicator hide:YES];
     [self.reloadButton setHidden:NO];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    [self.activityIndicator stopAnimating];
+    [self.activityIndicator hide:YES];
     // If the webview doesn't contain a valid URL, we have to reset baseURL for future reloads
     if ([self.mainWebView.request.URL.absoluteString length] == 0) {
         NSURL *url = [NSURL URLWithString:[error.userInfo objectForKey:@"NSErrorFailingURLStringKey"]];

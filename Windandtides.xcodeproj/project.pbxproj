@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B01EAB0139C240E00A64429 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B01EAAF139C240E00A64429 /* Entitlements.plist */; };
+		8B17429513AA8FC0006A3743 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B17429413AA8FC0006A3743 /* MBProgressHUD.m */; };
 		8B4438FE139ED02C00185ECE /* AnimatedSwipeGestures.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4438FD139ED02C00185ECE /* AnimatedSwipeGestures.m */; };
 		8B88C16E138075E2007D1C2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C16D138075E2007D1C2C /* UIKit.framework */; };
 		8B88C170138075E2007D1C2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C16F138075E2007D1C2C /* Foundation.framework */; };
@@ -51,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		8B01EAAF139C240E00A64429 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = ../Entitlements.plist; sourceTree = "<group>"; };
+		8B17429213AA8FB6006A3743 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		8B17429413AA8FC0006A3743 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		8B4438FC139ED02C00185ECE /* AnimatedSwipeGestures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedSwipeGestures.h; sourceTree = "<group>"; };
 		8B4438FD139ED02C00185ECE /* AnimatedSwipeGestures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedSwipeGestures.m; sourceTree = "<group>"; };
 		8B72BAF0139D879F00913374 /* WindandtidesUrlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindandtidesUrlManager.h; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 		8B4438FA139ECFA900185ECE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8B17429413AA8FC0006A3743 /* MBProgressHUD.m */,
+				8B17429213AA8FB6006A3743 /* MBProgressHUD.h */,
 				8B4438FC139ED02C00185ECE /* AnimatedSwipeGestures.h */,
 				8B4438FD139ED02C00185ECE /* AnimatedSwipeGestures.m */,
 				8BE0277B13A2D42800CB1FFA /* Macros.h */,
@@ -388,6 +393,7 @@
 				8B88C184138075E2007D1C2C /* WindandtidesViewController.m in Sources */,
 				8BE85395139D59B700041B34 /* WindandtidesUrlManager.m in Sources */,
 				8B4438FE139ED02C00185ECE /* AnimatedSwipeGestures.m in Sources */,
+				8B17429513AA8FC0006A3743 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
