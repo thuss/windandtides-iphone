@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B01EAB0139C240E00A64429 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B01EAAF139C240E00A64429 /* Entitlements.plist */; };
+		8B102EE913AABE5300AB4F50 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B102EE813AABE5300AB4F50 /* libFlurry.a */; };
 		8B17429513AA8FC0006A3743 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B17429413AA8FC0006A3743 /* MBProgressHUD.m */; };
 		8B4438FE139ED02C00185ECE /* AnimatedSwipeGestures.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4438FD139ED02C00185ECE /* AnimatedSwipeGestures.m */; };
 		8B88C16E138075E2007D1C2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C16D138075E2007D1C2C /* UIKit.framework */; };
@@ -52,6 +53,11 @@
 
 /* Begin PBXFileReference section */
 		8B01EAAF139C240E00A64429 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = ../Entitlements.plist; sourceTree = "<group>"; };
+		8B102EE413AABE5300AB4F50 /* FlurryAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdDelegate.h; sourceTree = "<group>"; };
+		8B102EE513AABE5300AB4F50 /* FlurryAPI+AppCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FlurryAPI+AppCircle.h"; sourceTree = "<group>"; };
+		8B102EE613AABE5300AB4F50 /* FlurryOffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryOffer.h; sourceTree = "<group>"; };
+		8B102EE713AABE5300AB4F50 /* FlurryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAPI.h; sourceTree = "<group>"; };
+		8B102EE813AABE5300AB4F50 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
 		8B17429213AA8FB6006A3743 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		8B17429413AA8FC0006A3743 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		8B4438FC139ED02C00185ECE /* AnimatedSwipeGestures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedSwipeGestures.h; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 				8B88C16E138075E2007D1C2C /* UIKit.framework in Frameworks */,
 				8B88C170138075E2007D1C2C /* Foundation.framework in Frameworks */,
 				8B88C172138075E2007D1C2C /* CoreGraphics.framework in Frameworks */,
+				8B102EE913AABE5300AB4F50 /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +132,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B102EE213AABE5300AB4F50 /* FlurryLib */ = {
+			isa = PBXGroup;
+			children = (
+				8B102EE313AABE5300AB4F50 /* AppCircle */,
+				8B102EE713AABE5300AB4F50 /* FlurryAPI.h */,
+				8B102EE813AABE5300AB4F50 /* libFlurry.a */,
+			);
+			path = FlurryLib;
+			sourceTree = "<group>";
+		};
+		8B102EE313AABE5300AB4F50 /* AppCircle */ = {
+			isa = PBXGroup;
+			children = (
+				8B102EE413AABE5300AB4F50 /* FlurryAdDelegate.h */,
+				8B102EE513AABE5300AB4F50 /* FlurryAPI+AppCircle.h */,
+				8B102EE613AABE5300AB4F50 /* FlurryOffer.h */,
+			);
+			path = AppCircle;
+			sourceTree = "<group>";
+		};
 		8B4438FA139ECFA900185ECE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +269,7 @@
 		8BE0278F13A2FC3400CB1FFA /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				8B102EE213AABE5300AB4F50 /* FlurryLib */,
 				8BE0279A13A2FD0700CB1FFA /* OCMock */,
 			);
 			path = Libraries;
@@ -471,8 +499,13 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Windandtides/Windandtides-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries/FlurryLib\"/**";
 				INFOPLIST_FILE = "Windandtides/Windandtides-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries/FlurryLib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -555,8 +588,13 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Windandtides/Windandtides-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries/FlurryLib\"/**";
 				INFOPLIST_FILE = "Windandtides/Windandtides-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries/FlurryLib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -570,8 +608,13 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Windandtides/Windandtides-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries/FlurryLib\"/**";
 				INFOPLIST_FILE = "Windandtides/Windandtides-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries/FlurryLib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

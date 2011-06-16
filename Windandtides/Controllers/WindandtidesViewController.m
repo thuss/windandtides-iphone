@@ -39,6 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.activityIndicator = [[MBProgressHUD alloc] initWithView:self.view];
+    self.activityIndicator.labelText = @"Loading";
     [self.view addSubview:self.activityIndicator];
     self.urlManager = [[[WindandtidesUrlManager alloc] init] autorelease];
     [self loadWebView:self.tabBarItem.tag];

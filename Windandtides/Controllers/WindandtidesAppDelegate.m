@@ -8,6 +8,7 @@
 
 #import "WindandtidesAppDelegate.h"
 #import "WindandtidesViewController.h"
+#import "FlurryAPI.h"
 
 @implementation WindandtidesAppDelegate
 
@@ -25,8 +26,19 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:dictionnary];
 }
 
+void analyticsExceptionHandler(NSException *exception) {
+    [FlurryAPI logError:@"Uncaught" message:@"Crash!" exception:exception];
+}
+
+- (void)configureAnalytics {
+    // Switch to non-test key for publishing
+    [FlurryAPI startSession:@"J17K15UXCE6897XDRNW3"]; 
+    NSSetUncaughtExceptionHandler(&analyticsExceptionHandler);
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self configureUserAgent];
+    [self configureAnalytics];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
