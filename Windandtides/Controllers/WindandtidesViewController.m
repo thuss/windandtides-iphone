@@ -16,15 +16,6 @@
 @synthesize urlManager = _urlManager;
 @synthesize swipeGestures = _swipeGestures;
 
-- (void)dealloc {
-    [_activityIndicator release];
-    [_reloadButton release];
-    [_mainWebView release];
-    [_urlManager release];
-    [_swipeGestures release];
-    [super dealloc];
-}
-
 #pragma mark - View lifecycle
 
 - (void)viewDidUnload {
@@ -38,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.activityIndicator = [[MBProgressHUD alloc] initWithView:self.view];
+    self.activityIndicator = [[[MBProgressHUD alloc] initWithView:self.view] autorelease];
     self.activityIndicator.labelText = @"Loading";
     [self.view addSubview:self.activityIndicator];
     self.urlManager = [[[WindandtidesUrlManager alloc] init] autorelease];
@@ -103,6 +94,15 @@
     if (buttonIndex == retryButtonIndex) {
         [self reloadWebViews:nil];
     }
+}
+
+- (void)dealloc {
+    [_activityIndicator release];
+    [_reloadButton release];
+    [_mainWebView release];
+    [_urlManager release];
+    [_swipeGestures release];
+    [super dealloc];
 }
 
 @end
