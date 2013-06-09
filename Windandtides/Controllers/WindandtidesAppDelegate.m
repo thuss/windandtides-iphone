@@ -8,7 +8,7 @@
 
 #import "WindandtidesAppDelegate.h"
 #import "WindandtidesViewController.h"
-#import "FlurryAnalytics.h"
+#import "Flurry.h"
 
 @implementation WindandtidesAppDelegate
 
@@ -27,12 +27,12 @@
 }
 
 void analyticsExceptionHandler(NSException *exception) {
-    [FlurryAnalytics logError:@"Uncaught" message:@"Crash!" exception:exception];
+    [Flurry logError:@"Uncaught" message:@"Crash!" exception:exception];
 }
 
 - (void)configureAnalytics {
     // Switch to non-test key for publishing
-    [FlurryAnalytics startSession:@"J17K15UXCE6897XDRNW3"];
+    [Flurry startSession:@"J17K15UXCE6897XDRNW3"];
     NSSetUncaughtExceptionHandler(&analyticsExceptionHandler);
 }
 
