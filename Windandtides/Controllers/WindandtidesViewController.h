@@ -14,11 +14,11 @@
 @interface WindandtidesViewController : UIViewController <UIWebViewDelegate, UIAlertViewDelegate> {
 }
 
-@property(nonatomic, retain) IBOutlet UIButton *reloadButton;
-@property(nonatomic, retain) IBOutlet UIWebView *mainWebView;
-@property(nonatomic, retain) MBProgressHUD *activityIndicator;
-@property(nonatomic, retain) WindandtidesUrlManager *urlManager;
-@property(nonatomic, retain) AnimatedSwipeGestures *swipeGestures;
+@property(nonatomic, strong) IBOutlet UIButton *reloadButton;
+@property(nonatomic, strong) IBOutlet UIWebView *mainWebView;
+@property(nonatomic, strong) MBProgressHUD *activityIndicator;
+@property(nonatomic, strong) WindandtidesUrlManager *urlManager;
+@property(nonatomic, strong) AnimatedSwipeGestures *swipeGestures;
 
 - (IBAction)reloadWebViews:(UIButton *)button;
 

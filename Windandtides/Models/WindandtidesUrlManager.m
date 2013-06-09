@@ -11,7 +11,7 @@
 
 @interface WindandtidesUrlManager ()
 
-@property(nonatomic, retain) NSDictionary *pages;
+@property(nonatomic, strong) NSDictionary *pages;
 
 - (NSString *)fullUrl:(NSString *)uri;
 
@@ -21,10 +21,6 @@
 
 @synthesize pages = _pages;
 
-- (void)dealloc {
-    [_pages release];
-    [super dealloc];
-}
 
 - (id)init {
     self = [super init];

@@ -29,12 +29,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.activityIndicator = [[[MBProgressHUD alloc] initWithView:self.view] autorelease];
+    self.activityIndicator = [[MBProgressHUD alloc] initWithView:self.view];
     self.activityIndicator.labelText = @"Loading";
     [self.view addSubview:self.activityIndicator];
-    self.urlManager = [[[WindandtidesUrlManager alloc] init] autorelease];
+    self.urlManager = [[WindandtidesUrlManager alloc] init];
     [self loadWebView:self.tabBarItem.tag];
-    self.swipeGestures = [[[AnimatedSwipeGestures alloc] initWithController:self.tabBarController] autorelease];
+    self.swipeGestures = [[AnimatedSwipeGestures alloc] initWithController:self.tabBarController];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -80,10 +80,10 @@
     }
     // Show the alert if we're the currently selected controller
     if([[[self tabBarController] selectedViewController] isEqual:self]) {
-        [[[[UIAlertView alloc] initWithTitle:@"Network Error"
+        [[[UIAlertView alloc] initWithTitle:@"Network Error"
                                      message:@"Do you you want to retry?" delegate:self
                            cancelButtonTitle:@"Retry"
-                           otherButtonTitles:@"Cancel", nil] autorelease] show];
+                           otherButtonTitles:@"Cancel", nil] show];
     }
 }
 
@@ -96,13 +96,5 @@
     }
 }
 
-- (void)dealloc {
-    [_activityIndicator release];
-    [_reloadButton release];
-    [_mainWebView release];
-    [_urlManager release];
-    [_swipeGestures release];
-    [super dealloc];
-}
 
 @end

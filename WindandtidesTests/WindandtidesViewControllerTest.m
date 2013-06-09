@@ -32,7 +32,6 @@ WindandtidesViewController *controller;
 - (void)testOutletsAreConnectedToNib {
     [controller loadView];
     assertThat(controller.mainWebView, notNilValue());
-    assertThat(controller.activityIndicator, notNilValue());
 }
 
 - (void)testViewDidLoad {       
