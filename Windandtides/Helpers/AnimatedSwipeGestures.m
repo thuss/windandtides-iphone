@@ -10,7 +10,7 @@
 
 @interface AnimatedSwipeGestures ()
 
-@property(nonatomic, unsafe_unretained) UITabBarController *controller;
+@property(nonatomic, weak) UITabBarController *controller;
 @property(nonatomic, strong) UISwipeGestureRecognizer *recognizerLeft;
 @property(nonatomic, strong) UISwipeGestureRecognizer *recognizerRight;
 
