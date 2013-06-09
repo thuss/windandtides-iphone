@@ -9,6 +9,7 @@
 #import "WindandtidesAppDelegate.h"
 #import "WindandtidesViewController.h"
 #import "Flurry.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation WindandtidesAppDelegate
 
@@ -24,6 +25,7 @@
 - (void)configureAnalytics {
     // Switch to non-test key for publishing
     [Flurry startSession:@"J17K15UXCE6897XDRNW3"];
+    [Crashlytics startWithAPIKey:@"c8253a4d97f816e77bf561578ffa10063d8f4e06"];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

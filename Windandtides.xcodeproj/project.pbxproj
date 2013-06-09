@@ -41,6 +41,7 @@
 		8BD53FCD17653C21008EEC13 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD53FCC17653C21008EEC13 /* SystemConfiguration.framework */; };
 		8BD53FCF17653EEC008EEC13 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD53FCE17653EEC008EEC13 /* StoreKit.framework */; };
 		8BD53FD71765402A008EEC13 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD53FD61765402A008EEC13 /* iRate.m */; };
+		8BD53FDE17654396008EEC13 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD53FDD17654396008EEC13 /* Crashlytics.framework */; };
 		8BE0278013A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE0277F13A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m */; };
 		8BE027A413A2FD2500CB1FFA /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE027A313A2FD2500CB1FFA /* libOCMock.a */; };
 		8BE85392139D57EB00041B34 /* WindandtidesUrlManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTest.m */; };
@@ -102,6 +103,7 @@
 		8BD53FCE17653EEC008EEC13 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8BD53FD51765402A008EEC13 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
 		8BD53FD61765402A008EEC13 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
+		8BD53FDD17654396008EEC13 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8BE0277B13A2D42800CB1FFA /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		8BE0277F13A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesViewControllerTest.m; sourceTree = "<group>"; };
 		8BE027A313A2FD2500CB1FFA /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				8B88C170138075E2007D1C2C /* Foundation.framework in Frameworks */,
 				8B88C172138075E2007D1C2C /* CoreGraphics.framework in Frameworks */,
 				8BD53FCB17653B39008EEC13 /* libFlurry.a in Frameworks */,
+				8BD53FDE17654396008EEC13 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +197,7 @@
 		8B88C16C138075E2007D1C2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BD53FDD17654396008EEC13 /* Crashlytics.framework */,
 				8BD53FCE17653EEC008EEC13 /* StoreKit.framework */,
 				8BD53FCC17653C21008EEC13 /* SystemConfiguration.framework */,
 				8B88C1A91380783F007D1C2C /* OCHamcrestIOS.framework */,
@@ -325,6 +329,7 @@
 				8B88C165138075E2007D1C2C /* Sources */,
 				8B88C166138075E2007D1C2C /* Frameworks */,
 				8B88C167138075E2007D1C2C /* Resources */,
+				8BD53FD817654238008EEC13 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -429,6 +434,19 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		8BD53FD817654238008EEC13 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run c8253a4d97f816e77bf561578ffa10063d8f4e06";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -521,6 +539,11 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = Windandtides/Entitlements.plist;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Windandtides/Windandtides-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -620,6 +643,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Windandtides/Windandtides-Prefix.pch";
@@ -643,6 +671,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Windandtides/Windandtides-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
