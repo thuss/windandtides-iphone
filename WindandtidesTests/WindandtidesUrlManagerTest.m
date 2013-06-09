@@ -25,7 +25,6 @@ WindandtidesUrlManager *urlManager;
 }
 
 - (void)tearDown {
-    [urlManager release];
     [super tearDown];
 }
 

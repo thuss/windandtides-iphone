@@ -164,7 +164,6 @@
 		8B88C15E138075E1007D1C2C = {
 			isa = PBXGroup;
 			children = (
-				8BD53FCC17653C21008EEC13 /* SystemConfiguration.framework */,
 				8B88C1AB13807D1C007D1C2C /* Views */,
 				8B88C173138075E2007D1C2C /* Controllers */,
 				8BE8538B139D55B600041B34 /* Models */,
@@ -189,6 +188,7 @@
 		8B88C16C138075E2007D1C2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BD53FCC17653C21008EEC13 /* SystemConfiguration.framework */,
 				8B88C1A91380783F007D1C2C /* OCHamcrestIOS.framework */,
 				8B88C16D138075E2007D1C2C /* UIKit.framework */,
 				8B88C16F138075E2007D1C2C /* Foundation.framework */,

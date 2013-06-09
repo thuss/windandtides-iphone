@@ -26,7 +26,6 @@ WindandtidesViewController *controller;
 }
 
 - (void)tearDown {
-    [controller release];
     [super tearDown];
 }
 
