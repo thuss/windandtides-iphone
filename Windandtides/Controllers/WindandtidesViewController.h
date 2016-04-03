@@ -22,6 +22,6 @@
 
 - (IBAction)reloadWebViews:(UIButton *)button;
 
-- (void)loadWebView:(int)tabIndex;
+- (void)loadWebView:(long)tabIndex;
 
 @end

@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		8B01EAB0139C240E00A64429 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B01EAAF139C240E00A64429 /* Entitlements.plist */; };
 		8B17429513AA8FC0006A3743 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B17429413AA8FC0006A3743 /* MBProgressHUD.m */; };
-		8B1FDEDD161904BF002A2B91 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B1FDEDB161904BF002A2B91 /* README.txt */; };
+		8B1F409A1CB1D9A700DB8ED7 /* libFlurry_7.5.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F40991CB1D9A700DB8ED7 /* libFlurry_7.5.2.a */; };
+		8B1F409C1CB1D9E100DB8ED7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F409B1CB1D9E100DB8ED7 /* Security.framework */; };
+		8B1F40A51CB1DC8A00DB8ED7 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F40A31CB1DC8A00DB8ED7 /* Fabric.framework */; };
+		8B1F40A61CB1DC8A00DB8ED7 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F40A41CB1DC8A00DB8ED7 /* Crashlytics.framework */; };
+		8B1F40A81CB1DCC500DB8ED7 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F40A71CB1DCC500DB8ED7 /* libc++.tbd */; };
+		8B1F40AA1CB1DCD200DB8ED7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F40A91CB1DCD200DB8ED7 /* libz.tbd */; };
 		8B4438FE139ED02C00185ECE /* AnimatedSwipeGestures.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4438FD139ED02C00185ECE /* AnimatedSwipeGestures.m */; };
 		8B88C16E138075E2007D1C2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C16D138075E2007D1C2C /* UIKit.framework */; };
 		8B88C170138075E2007D1C2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C16F138075E2007D1C2C /* Foundation.framework */; };
@@ -23,7 +28,6 @@
 		8B88C18F138075E2007D1C2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C16F138075E2007D1C2C /* Foundation.framework */; };
 		8B88C190138075E2007D1C2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C171138075E2007D1C2C /* CoreGraphics.framework */; };
 		8B88C198138075E2007D1C2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B88C196138075E2007D1C2C /* InfoPlist.strings */; };
-		8B88C19D138075E2007D1C2C /* WindandtidesAppDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B88C19C138075E2007D1C2C /* WindandtidesAppDelegateTest.m */; };
 		8B88C1AA1380783F007D1C2C /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C1A91380783F007D1C2C /* OCHamcrestIOS.framework */; };
 		8B8C85311386FB6000697EBE /* WindandtidesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C85301386FB6000697EBE /* WindandtidesView.xib */; };
 		8BAA465D138D6BA500F9165B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA465C138D6BA500F9165B /* Default.png */; };
@@ -37,11 +41,9 @@
 		8BC54B24138DCCEC005E74F4 /* windvane.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B23138DCCEC005E74F4 /* windvane.png */; };
 		8BC54B26138DCDB8005E74F4 /* monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B25138DCDB8005E74F4 /* monitor.png */; };
 		8BC54B28138DE079005E74F4 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B27138DE079005E74F4 /* reload.png */; };
-		8BD53FCB17653B39008EEC13 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD53FCA17653B39008EEC13 /* libFlurry.a */; };
 		8BD53FCD17653C21008EEC13 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD53FCC17653C21008EEC13 /* SystemConfiguration.framework */; };
 		8BD53FCF17653EEC008EEC13 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD53FCE17653EEC008EEC13 /* StoreKit.framework */; };
 		8BD53FD71765402A008EEC13 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD53FD61765402A008EEC13 /* iRate.m */; };
-		8BD53FDE17654396008EEC13 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD53FDD17654396008EEC13 /* Crashlytics.framework */; };
 		8BE0278013A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE0277F13A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m */; };
 		8BE027A413A2FD2500CB1FFA /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE027A313A2FD2500CB1FFA /* libOCMock.a */; };
 		8BE85392139D57EB00041B34 /* WindandtidesUrlManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTest.m */; };
@@ -62,7 +64,13 @@
 		8B01EAAF139C240E00A64429 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = ../Entitlements.plist; sourceTree = "<group>"; };
 		8B17429213AA8FB6006A3743 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		8B17429413AA8FC0006A3743 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		8B1FDEDB161904BF002A2B91 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		8B1F40981CB1D9A700DB8ED7 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		8B1F40991CB1D9A700DB8ED7 /* libFlurry_7.5.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.5.2.a; sourceTree = "<group>"; };
+		8B1F409B1CB1D9E100DB8ED7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8B1F40A31CB1DC8A00DB8ED7 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		8B1F40A41CB1DC8A00DB8ED7 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		8B1F40A71CB1DCC500DB8ED7 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		8B1F40A91CB1DCD200DB8ED7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		8B4438FC139ED02C00185ECE /* AnimatedSwipeGestures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedSwipeGestures.h; sourceTree = "<group>"; };
 		8B4438FD139ED02C00185ECE /* AnimatedSwipeGestures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedSwipeGestures.m; sourceTree = "<group>"; };
 		8B72BAF0139D879F00913374 /* WindandtidesUrlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindandtidesUrlManager.h; sourceTree = "<group>"; };
@@ -83,7 +91,6 @@
 		8B88C195138075E2007D1C2C /* WindandtidesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WindandtidesTests-Info.plist"; sourceTree = "<group>"; };
 		8B88C197138075E2007D1C2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B88C199138075E2007D1C2C /* WindandtidesTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WindandtidesTests-Prefix.pch"; sourceTree = "<group>"; };
-		8B88C19C138075E2007D1C2C /* WindandtidesAppDelegateTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindandtidesAppDelegateTest.m; sourceTree = "<group>"; };
 		8B88C1A91380783F007D1C2C /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		8B8C85301386FB6000697EBE /* WindandtidesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindandtidesView.xib; sourceTree = "<group>"; };
 		8BAA465C138D6BA500F9165B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -97,13 +104,10 @@
 		8BC54B23138DCCEC005E74F4 /* windvane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windvane.png; sourceTree = "<group>"; };
 		8BC54B25138DCDB8005E74F4 /* monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor.png; sourceTree = "<group>"; };
 		8BC54B27138DE079005E74F4 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
-		8BD53FC917653B39008EEC13 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		8BD53FCA17653B39008EEC13 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
 		8BD53FCC17653C21008EEC13 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8BD53FCE17653EEC008EEC13 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8BD53FD51765402A008EEC13 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
 		8BD53FD61765402A008EEC13 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
-		8BD53FDD17654396008EEC13 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8BE0277B13A2D42800CB1FFA /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		8BE0277F13A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesViewControllerTest.m; sourceTree = "<group>"; };
 		8BE027A313A2FD2500CB1FFA /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
@@ -122,13 +126,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B1F40AA1CB1DCD200DB8ED7 /* libz.tbd in Frameworks */,
+				8B1F40A81CB1DCC500DB8ED7 /* libc++.tbd in Frameworks */,
+				8B1F409C1CB1D9E100DB8ED7 /* Security.framework in Frameworks */,
+				8B1F40A61CB1DC8A00DB8ED7 /* Crashlytics.framework in Frameworks */,
 				8BD53FCF17653EEC008EEC13 /* StoreKit.framework in Frameworks */,
 				8BD53FCD17653C21008EEC13 /* SystemConfiguration.framework in Frameworks */,
+				8B1F40A51CB1DC8A00DB8ED7 /* Fabric.framework in Frameworks */,
+				8B1F409A1CB1D9A700DB8ED7 /* libFlurry_7.5.2.a in Frameworks */,
 				8B88C16E138075E2007D1C2C /* UIKit.framework in Frameworks */,
 				8B88C170138075E2007D1C2C /* Foundation.framework in Frameworks */,
 				8B88C172138075E2007D1C2C /* CoreGraphics.framework in Frameworks */,
-				8BD53FCB17653B39008EEC13 /* libFlurry.a in Frameworks */,
-				8BD53FDE17654396008EEC13 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +158,8 @@
 		8B102EE213AABE5300AB4F50 /* FlurryLib */ = {
 			isa = PBXGroup;
 			children = (
-				8BD53FC917653B39008EEC13 /* Flurry.h */,
-				8BD53FCA17653B39008EEC13 /* libFlurry.a */,
-				8B1FDEDB161904BF002A2B91 /* README.txt */,
+				8B1F40981CB1D9A700DB8ED7 /* Flurry.h */,
+				8B1F40991CB1D9A700DB8ED7 /* libFlurry_7.5.2.a */,
 			);
 			path = FlurryLib;
 			sourceTree = "<group>";
@@ -197,7 +204,11 @@
 		8B88C16C138075E2007D1C2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8BD53FDD17654396008EEC13 /* Crashlytics.framework */,
+				8B1F40A91CB1DCD200DB8ED7 /* libz.tbd */,
+				8B1F40A71CB1DCC500DB8ED7 /* libc++.tbd */,
+				8B1F40A31CB1DC8A00DB8ED7 /* Fabric.framework */,
+				8B1F40A41CB1DC8A00DB8ED7 /* Crashlytics.framework */,
+				8B1F409B1CB1D9E100DB8ED7 /* Security.framework */,
 				8BD53FCE17653EEC008EEC13 /* StoreKit.framework */,
 				8BD53FCC17653C21008EEC13 /* SystemConfiguration.framework */,
 				8B88C1A91380783F007D1C2C /* OCHamcrestIOS.framework */,
@@ -248,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				8B88C194138075E2007D1C2C /* Supporting Files */,
-				8B88C19C138075E2007D1C2C /* WindandtidesAppDelegateTest.m */,
 				8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTest.m */,
 				8BE0277F13A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m */,
 			);
@@ -357,7 +367,7 @@
 			name = WindandtidesTests;
 			productName = WindandtidesTests;
 			productReference = 8B88C18D138075E2007D1C2C /* WindandtidesTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -365,7 +375,7 @@
 		8B88C160138075E1007D1C2C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Windandtides.com;
 			};
 			buildConfigurationList = 8B88C163138075E1007D1C2C /* Build configuration list for PBXProject "Windandtides" */;
@@ -404,7 +414,6 @@
 				8BB80EDE13A6EB8900C0C4C5 /* Default@2x.png in Resources */,
 				8BB80EE013A6EBCD00C0C4C5 /* Default-Portrait~ipad.png in Resources */,
 				8BB80EE413A6ED5400C0C4C5 /* Default-Landscape~ipad.png in Resources */,
-				8B1FDEDD161904BF002A2B91 /* README.txt in Resources */,
 				8BAA6DF2161911C000C85D95 /* Default-568h@2x.png in Resources */,
 				8BAA6DF61619122700C85D95 /* icon@2x.png in Resources */,
 			);
@@ -445,7 +454,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run c8253a4d97f816e77bf561578ffa10063d8f4e06";
+			shellScript = "./Fabric.framework/run c8253a4d97f816e77bf561578ffa10063d8f4e06 022dfd28a52047660fee97e4bc084bafb467d5685d11e63b6a5c2deaebab4179";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -468,7 +477,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B88C19D138075E2007D1C2C /* WindandtidesAppDelegateTest.m in Sources */,
 				8BE85392139D57EB00041B34 /* WindandtidesUrlManagerTest.m in Sources */,
 				8BE0278013A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m in Sources */,
 			);
@@ -517,7 +525,6 @@
 		8B01EAB1139C246000A64429 /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 5;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -541,8 +548,8 @@
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Libraries\"",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Windandtides/Windandtides-Prefix.pch";
@@ -554,6 +561,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries/FlurryLib\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windandtides.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -590,6 +598,7 @@
 					"-force_load",
 					"$(PROJECT_DIR)/Libraries/OCMock/libOCMock.a",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windandtides.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -599,9 +608,9 @@
 		8B88C19E138075E2007D1C2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 5;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -610,6 +619,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -619,7 +629,6 @@
 		8B88C19F138075E2007D1C2C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 5;
@@ -645,8 +654,8 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Libraries\"",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -659,6 +668,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries/FlurryLib\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windandtides.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -675,8 +685,8 @@
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Libraries\"",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Windandtides/Windandtides-Prefix.pch";
@@ -688,6 +698,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries/FlurryLib\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windandtides.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -726,6 +737,7 @@
 					"-force_load",
 					"$(PROJECT_DIR)/Libraries/OCMock/libOCMock.a",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windandtides.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -761,6 +773,7 @@
 					"-force_load",
 					"$(PROJECT_DIR)/Libraries/OCMock/libOCMock.a",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windandtides.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

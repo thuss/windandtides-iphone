@@ -43,7 +43,7 @@
 
 #pragma mark - UIWebView and UIWebViewDelegate methods
 
-- (void)loadWebView:(int)tabIndex {
+- (void)loadWebView:(long)tabIndex {
     WindandtidesPages pageForTab[4] = {kForecast, kTidesAndCurrents, kAngelIslandWinds, kGoldenGateWinds};
     WindandtidesPages page = pageForTab[tabIndex];
     NSURL *url = [NSURL URLWithString:[self.urlManager urlFor:page]];    
@@ -76,7 +76,7 @@
     // If the webview doesn't contain a valid URL, we have to reset baseURL for future reloads
     if ([self.mainWebView.request.URL.absoluteString length] == 0) {
         NSURL *url = [NSURL URLWithString:[error.userInfo objectForKey:@"NSErrorFailingURLStringKey"]];
-        [self.mainWebView loadHTMLString:nil baseURL:url];
+        [self.mainWebView loadHTMLString:@"" baseURL:url];
     }
     // Show the alert if we're the currently selected controller
     if([[[self tabBarController] selectedViewController] isEqual:self]) {
