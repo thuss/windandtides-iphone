@@ -46,6 +46,7 @@
 		8BD53FD71765402A008EEC13 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD53FD61765402A008EEC13 /* iRate.m */; };
 		8BE0278013A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE0277F13A2DDDF00CB1FFA /* WindandtidesViewControllerTest.m */; };
 		8BE027A413A2FD2500CB1FFA /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE027A313A2FD2500CB1FFA /* libOCMock.a */; };
+		8BE6907B1DC5189100267225 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE6907A1DC5189100267225 /* Images.xcassets */; };
 		8BE85392139D57EB00041B34 /* WindandtidesUrlManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTest.m */; };
 		8BE85395139D59B700041B34 /* WindandtidesUrlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */; };
 /* End PBXBuildFile section */
@@ -117,6 +118,7 @@
 		8BE027B413A3015F00CB1FFA /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
 		8BE027B513A3015F00CB1FFA /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
 		8BE027B613A3015F00CB1FFA /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		8BE6907A1DC5189100267225 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Windandtides/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		8BE85391139D57EB00041B34 /* WindandtidesUrlManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManagerTest.m; sourceTree = "<group>"; };
 		8BE85394139D59B700041B34 /* WindandtidesUrlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindandtidesUrlManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +236,7 @@
 		8B88C174138075E2007D1C2C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8BE6907A1DC5189100267225 /* Images.xcassets */,
 				8BAA6DF0161911C000C85D95 /* Default-568h@2x.png */,
 				8BB80EE313A6ED5400C0C4C5 /* Default-Landscape~ipad.png */,
 				8BB80EDF13A6EBCD00C0C4C5 /* Default-Portrait~ipad.png */,
@@ -377,6 +380,11 @@
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Windandtides.com;
+				TargetAttributes = {
+					8B88C168138075E2007D1C2C = {
+						DevelopmentTeam = 699723NDVT;
+					};
+				};
 			};
 			buildConfigurationList = 8B88C163138075E1007D1C2C /* Build configuration list for PBXProject "Windandtides" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -402,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B88C178138075E2007D1C2C /* InfoPlist.strings in Resources */,
+				8BE6907B1DC5189100267225 /* Images.xcassets in Resources */,
 				8B88C181138075E2007D1C2C /* MainWindow.xib in Resources */,
 				8B8C85311386FB6000697EBE /* WindandtidesView.xib in Resources */,
 				8BAA465D138D6BA500F9165B /* Default.png in Resources */,
@@ -526,7 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -543,9 +552,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = Windandtides/Entitlements.plist;
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 699723NDVT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -556,7 +568,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries/FlurryLib\"/**";
 				INFOPLIST_FILE = "Windandtides/Windandtides-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries/FlurryLib\"",
@@ -609,7 +621,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -631,7 +643,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -650,8 +662,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 699723NDVT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -663,7 +678,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries/FlurryLib\"/**";
 				INFOPLIST_FILE = "Windandtides/Windandtides-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries/FlurryLib\"",
@@ -679,10 +694,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 699723NDVT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -693,7 +711,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Libraries/FlurryLib\"/**";
 				INFOPLIST_FILE = "Windandtides/Windandtides-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries/FlurryLib\"",
