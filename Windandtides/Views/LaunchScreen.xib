@@ -16,22 +16,31 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="kSq-jZ-Oyy">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="windandtides-photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cVZ-CT-IZy">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind and Tides" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRy-Os-l9a">
+                    <rect key="frame" x="28" y="309" width="319" height="48"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.7378880033557047" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="kSq-jZ-Oyy" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="7sh-NI-vWO"/>
-                <constraint firstItem="kSq-jZ-Oyy" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="8gT-CA-aXI"/>
-                <constraint firstItem="kSq-jZ-Oyy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="K7Y-1C-ZEZ"/>
-                <constraint firstItem="kSq-jZ-Oyy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YqZ-oY-DwL"/>
+                <constraint firstItem="cVZ-CT-IZy" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="50" id="D02-Fr-ddh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mRy-Os-l9a" secondAttribute="trailing" constant="28" id="HZk-g9-yoP"/>
+                <constraint firstItem="cVZ-CT-IZy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JwM-1L-2x3"/>
+                <constraint firstItem="cVZ-CT-IZy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Mai-kS-HjG"/>
+                <constraint firstItem="cVZ-CT-IZy" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="c05-Ie-f7l"/>
+                <constraint firstItem="mRy-Os-l9a" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yfX-4z-Yco"/>
+                <constraint firstItem="mRy-Os-l9a" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="28" id="yx6-ze-A7m"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="34.5" y="54.5"/>
         </view>
     </objects>
     <resources>
-        <image name="LaunchImage" width="426" height="320"/>
+        <image name="windandtides-photo.jpg" width="1280" height="960"/>
     </resources>
 </document>
