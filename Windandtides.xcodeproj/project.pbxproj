@@ -30,6 +30,7 @@
 		8B88C198138075E2007D1C2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B88C196138075E2007D1C2C /* InfoPlist.strings */; };
 		8B88C1AA1380783F007D1C2C /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B88C1A91380783F007D1C2C /* OCHamcrestIOS.framework */; };
 		8B8C85311386FB6000697EBE /* WindandtidesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C85301386FB6000697EBE /* WindandtidesView.xib */; };
+		8B95CEF91FC9FAB4005A1B44 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B95CEF81FC9FAB4005A1B44 /* LaunchScreen.xib */; };
 		8BAA465D138D6BA500F9165B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA465C138D6BA500F9165B /* Default.png */; };
 		8BAA4660138D6DA600F9165B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA465F138D6DA600F9165B /* icon.png */; };
 		8BAA6DF2161911C000C85D95 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BAA6DF0161911C000C85D95 /* Default-568h@2x.png */; };
@@ -94,6 +95,7 @@
 		8B88C199138075E2007D1C2C /* WindandtidesTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WindandtidesTests-Prefix.pch"; sourceTree = "<group>"; };
 		8B88C1A91380783F007D1C2C /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		8B8C85301386FB6000697EBE /* WindandtidesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindandtidesView.xib; sourceTree = "<group>"; };
+		8B95CEF81FC9FAB4005A1B44 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		8BAA465C138D6BA500F9165B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8BAA465F138D6DA600F9165B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		8BAA6DF0161911C000C85D95 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			children = (
 				8B88C17F138075E2007D1C2C /* MainWindow.xib */,
 				8B8C85301386FB6000697EBE /* WindandtidesView.xib */,
+				8B95CEF81FC9FAB4005A1B44 /* LaunchScreen.xib */,
 			);
 			name = Views;
 			path = Windandtides/Views;
@@ -412,6 +415,7 @@
 				8B88C178138075E2007D1C2C /* InfoPlist.strings in Resources */,
 				8BE6907B1DC5189100267225 /* Images.xcassets in Resources */,
 				8B88C181138075E2007D1C2C /* MainWindow.xib in Resources */,
+				8B95CEF91FC9FAB4005A1B44 /* LaunchScreen.xib in Resources */,
 				8B8C85311386FB6000697EBE /* WindandtidesView.xib in Resources */,
 				8BAA465D138D6BA500F9165B /* Default.png in Resources */,
 				8BAA4660138D6DA600F9165B /* icon.png in Resources */,
@@ -553,7 +557,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = Windandtides/Entitlements.plist;
 				COPY_PHASE_STRIP = YES;
@@ -663,7 +666,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 699723NDVT;
@@ -695,7 +697,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
