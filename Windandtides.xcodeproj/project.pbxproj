@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8B01EAB0139C240E00A64429 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B01EAAF139C240E00A64429 /* Entitlements.plist */; };
 		8B17429513AA8FC0006A3743 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B17429413AA8FC0006A3743 /* MBProgressHUD.m */; };
-		8B1F409A1CB1D9A700DB8ED7 /* libFlurry_7.5.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F40991CB1D9A700DB8ED7 /* libFlurry_7.5.2.a */; };
 		8B1F409C1CB1D9E100DB8ED7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F409B1CB1D9E100DB8ED7 /* Security.framework */; };
 		8B1F40A51CB1DC8A00DB8ED7 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F40A31CB1DC8A00DB8ED7 /* Fabric.framework */; };
 		8B1F40A61CB1DC8A00DB8ED7 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F40A41CB1DC8A00DB8ED7 /* Crashlytics.framework */; };
@@ -62,8 +61,6 @@
 		8B01EAAF139C240E00A64429 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = ../Entitlements.plist; sourceTree = "<group>"; };
 		8B17429213AA8FB6006A3743 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		8B17429413AA8FC0006A3743 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		8B1F40981CB1D9A700DB8ED7 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		8B1F40991CB1D9A700DB8ED7 /* libFlurry_7.5.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.5.2.a; sourceTree = "<group>"; };
 		8B1F409B1CB1D9E100DB8ED7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8B1F40A31CB1DC8A00DB8ED7 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		8B1F40A41CB1DC8A00DB8ED7 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
@@ -129,7 +126,6 @@
 				8BD53FCF17653EEC008EEC13 /* StoreKit.framework in Frameworks */,
 				8BD53FCD17653C21008EEC13 /* SystemConfiguration.framework in Frameworks */,
 				8B1F40A51CB1DC8A00DB8ED7 /* Fabric.framework in Frameworks */,
-				8B1F409A1CB1D9A700DB8ED7 /* libFlurry_7.5.2.a in Frameworks */,
 				8B88C16E138075E2007D1C2C /* UIKit.framework in Frameworks */,
 				8B88C170138075E2007D1C2C /* Foundation.framework in Frameworks */,
 				8B88C172138075E2007D1C2C /* CoreGraphics.framework in Frameworks */,
@@ -151,15 +147,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8B102EE213AABE5300AB4F50 /* FlurryLib */ = {
-			isa = PBXGroup;
-			children = (
-				8B1F40981CB1D9A700DB8ED7 /* Flurry.h */,
-				8B1F40991CB1D9A700DB8ED7 /* libFlurry_7.5.2.a */,
-			);
-			path = FlurryLib;
-			sourceTree = "<group>";
-		};
 		8B4438FA139ECFA900185ECE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				8BD53FD41765402A008EEC13 /* iRate */,
-				8B102EE213AABE5300AB4F50 /* FlurryLib */,
 				8BE0279A13A2FD0700CB1FFA /* OCMock */,
 			);
 			path = Libraries;
