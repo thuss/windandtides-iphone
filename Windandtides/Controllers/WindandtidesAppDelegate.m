@@ -8,6 +8,7 @@
 
 #import "WindandtidesAppDelegate.h"
 #import "WindandtidesViewController.h"
+#import "iRate.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 
