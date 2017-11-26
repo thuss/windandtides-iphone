@@ -38,7 +38,6 @@
 		8BC54B17138DCAD3005E74F4 /* trend.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B16138DCAD3005E74F4 /* trend.png */; };
 		8BC54B24138DCCEC005E74F4 /* windvane.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B23138DCCEC005E74F4 /* windvane.png */; };
 		8BC54B26138DCDB8005E74F4 /* monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B25138DCDB8005E74F4 /* monitor.png */; };
-		8BC54B28138DE079005E74F4 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BC54B27138DE079005E74F4 /* reload.png */; };
 		8BD53FCD17653C21008EEC13 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD53FCC17653C21008EEC13 /* SystemConfiguration.framework */; };
 		8BD53FCF17653EEC008EEC13 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD53FCE17653EEC008EEC13 /* StoreKit.framework */; };
 		8BD53FD71765402A008EEC13 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD53FD61765402A008EEC13 /* iRate.m */; };
@@ -100,7 +99,6 @@
 		8BC54B16138DCAD3005E74F4 /* trend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trend.png; sourceTree = "<group>"; };
 		8BC54B23138DCCEC005E74F4 /* windvane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windvane.png; sourceTree = "<group>"; };
 		8BC54B25138DCDB8005E74F4 /* monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monitor.png; sourceTree = "<group>"; };
-		8BC54B27138DE079005E74F4 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
 		8BD53FCC17653C21008EEC13 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8BD53FCE17653EEC008EEC13 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8BD53FD51765402A008EEC13 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 			children = (
 				8B95CF031FC9FFEF005A1B44 /* windandtides-photo.jpg */,
 				8BE6907A1DC5189100267225 /* Images.xcassets */,
-				8BC54B27138DE079005E74F4 /* reload.png */,
 				8BC54B25138DCDB8005E74F4 /* monitor.png */,
 				8BC54B23138DCCEC005E74F4 /* windvane.png */,
 				8BC54B16138DCAD3005E74F4 /* trend.png */,
@@ -414,7 +411,6 @@
 				8BC54B17138DCAD3005E74F4 /* trend.png in Resources */,
 				8BC54B24138DCCEC005E74F4 /* windvane.png in Resources */,
 				8BC54B26138DCDB8005E74F4 /* monitor.png in Resources */,
-				8BC54B28138DE079005E74F4 /* reload.png in Resources */,
 				8B01EAB0139C240E00A64429 /* Entitlements.plist in Resources */,
 				8BAA6DF61619122700C85D95 /* icon@2x.png in Resources */,
 			);
