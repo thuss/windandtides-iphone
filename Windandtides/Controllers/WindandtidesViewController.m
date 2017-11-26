@@ -10,12 +10,6 @@
 
 @implementation WindandtidesViewController
 
-@synthesize activityIndicator = _activityIndicator;
-@synthesize reloadButton = _reloadButton;
-@synthesize mainWebView = _mainWebView;
-@synthesize urlManager = _urlManager;
-@synthesize swipeGestures = _swipeGestures;
-
 #pragma mark - View lifecycle
 
 - (void)viewDidUnload {
@@ -35,6 +29,9 @@
     self.urlManager = [[WindandtidesUrlManager alloc] init];
     [self loadWebView:self.tabBarItem.tag];
     self.swipeGestures = [[AnimatedSwipeGestures alloc] initWithController:self.tabBarController];
+    if (@available(iOS 11, *)) {
+        self.topConstraintFor10AndLower.active = NO;
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

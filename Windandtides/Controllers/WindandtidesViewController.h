@@ -16,6 +16,7 @@
 
 @property(nonatomic, strong) IBOutlet UIButton *reloadButton;
 @property(nonatomic, strong) IBOutlet UIWebView *mainWebView;
+@property(nonatomic, strong) IBOutlet NSLayoutConstraint *topConstraintFor10AndLower;
 @property(nonatomic, strong) MBProgressHUD *activityIndicator;
 @property(nonatomic, strong) WindandtidesUrlManager *urlManager;
 @property(nonatomic, strong) AnimatedSwipeGestures *swipeGestures;
